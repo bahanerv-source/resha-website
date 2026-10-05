@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="rs-footer">
       <div className="rs-container rs-footer__grid">
         <div className="rs-footer__brand">
-          <img src="/images/brand/risha-logo-brand.webp" width={426} height={288} alt={site.fullName} loading="lazy" />
+          <img src="/images/brand/risha-logo-ivory.webp" width={426} height={288} alt={site.fullName} loading="lazy" />
           <p className="rs-small rs-muted">{site.tagline}. {site.serviceArea}.</p>
           <div className="rs-social">
             <a href={site.social.instagram} className="rs-iconbtn" aria-label="ريشة على إنستغرام" target="_blank" rel="noopener">

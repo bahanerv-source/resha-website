@@ -3,7 +3,7 @@ import { categoryUrl, productCategory, related } from '../lib/catalog';
 import { Crumbs } from '../components/banners';
 import { ProductCard } from '../components/cards';
 import { Island } from '../components/Island';
-import { Section, SectionHeader } from '../components/ui';
+import { Section, SectionHeader, ViewAll } from '../components/ui';
 
 export function ProductPage({ p }: { p: Product }) {
   const c = productCategory(p);
@@ -21,12 +21,13 @@ export function ProductPage({ p }: { p: Product }) {
         </div>
       </div>
       <Section labelledBy="h-related">
-        <SectionHeader title="قد يعجبك أيضاً" id="h-related" start action={{ label: `كل ${c.name}`, href: categoryUrl(c) }} />
+        <SectionHeader title="قد يعجبك أيضاً" id="h-related" />
         <div className="rs-grid">
           {related(p, 4).map((r) => (
             <ProductCard p={r} key={r.slug} />
           ))}
         </div>
+        <ViewAll label={`كل ${c.name}`} href={categoryUrl(c)} />
       </Section>
     </>
   );

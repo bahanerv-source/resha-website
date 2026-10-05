@@ -47,7 +47,7 @@ export function Document({
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={url} />
         {meta.noindex && <meta name="robots" content="noindex" />}
-        <meta name="theme-color" content="#FCF8F2" />
+        <meta name="theme-color" content="#FFFFFF" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ar_JO" />
         <meta property="og:site_name" content={site.name} />
@@ -58,9 +58,6 @@ export function Document({
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" sizes="48x48" href="/images/brand/favicon-48.png" />
         <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300..800&family=Rakkas&display=swap" />
         <link rel="stylesheet" href={assets.css} />
         <script type="module" src={assets.js} async />
         {meta.jsonLd?.map((d, i) => (

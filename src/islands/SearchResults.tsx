@@ -7,7 +7,7 @@ import { ProductCard } from '../components/cards';
 import { Icon } from '../components/Icon';
 
 /** The /search/ page: reads ?q=, filters the catalogue in the browser. */
-export function SearchResults() {
+export function SearchResults(_props: Record<string, never>) {
   const index = useMemo(() => searchIndex(), []);
   const [q, setQ] = useState('');
   useEffect(() => {

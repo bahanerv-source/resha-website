@@ -1,4 +1,5 @@
-/* Order matters: design tokens → design-system components → site layout. */
+/* Order matters: font → design tokens → design-system components → site layout → theme. */
+@import '@fontsource-variable/readex-pro/wght.css';
 @import './tokens.css';
 @import './ds.css';
 @import './site.css';

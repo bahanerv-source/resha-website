@@ -44,7 +44,7 @@ export function CategoryPage({ c }: { c: Category }) {
 
       {bundles.length > 0 && (
         <Section id="bundles" labelledBy="h-bundles">
-          <SectionHeader eyebrow="وفّر مع الباقات" title="باقات جاهزة" sub="بشعار المدرسة والأسماء، بسعر أقل من شراء كل قطعة وحدها." id="h-bundles" />
+          <SectionHeader title="باقات جاهزة" sub="بشعار المدرسة والأسماء، بسعر أقل من شراء كل قطعة وحدها." id="h-bundles" />
           <div className="rs-packs">
             {bundles.map((b) => (
               <BundleCard p={b} key={b.slug} />

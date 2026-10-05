@@ -15,7 +15,21 @@ export function SiteHeader({ active }: Props) {
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [announce, setAnnounce] = useState(true);
+  const [compact, setCompact] = useState(false);
   const lastTrigger = useRef<HTMLElement | null>(null);
+  const wrap = useRef<HTMLDivElement>(null);
+
+  // Once the full header has scrolled away, a slim black bar slides in at the top.
+  // The wrapper keeps the header's height in the page, so nothing below it jumps.
+  useEffect(() => {
+    const onScroll = () => {
+      const el = wrap.current;
+      if (el) setCompact(window.scrollY > el.offsetTop + el.offsetHeight);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const open = (which: 'menu' | 'search', e: React.MouseEvent<HTMLElement>) => {
     lastTrigger.current = e.currentTarget;
@@ -46,9 +60,7 @@ export function SiteHeader({ active }: Props) {
       </a>
       {a.enabled && announce && (
         <div className="rs-announce">
-          <span className="rs-announce__item">
-            <Icon name="truck" size="sm" /> {a.text}
-          </span>
+          <span className="rs-announce__item">{a.text}</span>
           <i className="rs-announce__sep" />
           <span>
             <strong>{a.highlight}</strong> — <a href={a.href}>{a.linkLabel}</a>
@@ -59,39 +71,42 @@ export function SiteHeader({ active }: Props) {
         </div>
       )}
 
-      <header className="rs-header rs-site-header">
-        <div className="rs-header__row">
-          <div className="rs-header__start">
-            <button type="button" className="rs-iconbtn rs-only-mobile" aria-label="القائمة" aria-expanded={menu} aria-controls="rs-drawer" onClick={(e) => open('menu', e)}>
-              <Icon name="menu" size="lg" />
-            </button>
-            <button type="button" className="rs-hlink rs-only-desktop" onClick={(e) => open('search', e)} aria-haspopup="dialog">
-              <Icon name="search" /> بحث
-            </button>
-          </div>
-          <a href="/" className="rs-header__logo" aria-label={`${site.name} — الصفحة الرئيسية`}>
-            <img src="/images/brand/risha-logo-brand.webp" width={426} height={288} alt={site.fullName} />
-          </a>
-          <div className="rs-header__end">
-            <button type="button" className="rs-iconbtn rs-only-mobile" aria-label="بحث" onClick={(e) => open('search', e)} aria-haspopup="dialog">
-              <Icon name="search" size="lg" />
-            </button>
-            <a href={waGeneral()} className="rs-hlink rs-hlink--wa rs-only-desktop" target="_blank" rel="noopener">
-              <Icon name="whatsapp" /> اطلب عبر واتساب
+      <div className="rs-headwrap" ref={wrap}>
+        <header className={cx('rs-header rs-site-header', compact && 'is-compact')}>
+          <div className="rs-header__row">
+            <div className="rs-header__start">
+              <button type="button" className="rs-iconbtn rs-only-mobile" aria-label="القائمة" aria-expanded={menu} aria-controls="rs-drawer" onClick={(e) => open('menu', e)}>
+                <Icon name="menu" size="lg" />
+              </button>
+              <button type="button" className="rs-iconbtn" aria-label="بحث" onClick={(e) => open('search', e)} aria-haspopup="dialog">
+                <Icon name="search" size="lg" />
+              </button>
+            </div>
+            <a href="/" className="rs-header__logo" aria-label={`${site.name} — الصفحة الرئيسية`}>
+              <img className="rs-header__logo-main" src="/images/brand/risha-logo-brand.webp" width={426} height={288} alt={site.fullName} />
+              <img className="rs-header__logo-alt" src="/images/brand/risha-logo-ivory.webp" width={426} height={288} alt="" />
             </a>
+            <div className="rs-header__end">
+              <a href={site.social.instagram} className="rs-iconbtn rs-only-desktop" aria-label="ريشة على إنستغرام" target="_blank" rel="noopener">
+                <Icon name="instagram" size="lg" />
+              </a>
+              <a href={waGeneral()} className="rs-iconbtn" aria-label="اطلب عبر واتساب" target="_blank" rel="noopener">
+                <Icon name="whatsapp" size="lg" />
+              </a>
+            </div>
           </div>
-        </div>
-        <nav className="rs-header__nav rs-nav rs-only-desktop" aria-label="الأقسام">
-          <a href={campaign.navHref} className={cx('rs-nav__link rs-nav__link--campaign', active === 'offers' && 'is-active')}>
-            {campaign.navLabel}
-          </a>
-          {navCats.map((c) => (
-            <a key={c.id} href={`/category/${c.slug}/`} className={cx('rs-nav__link', active === c.id && 'is-active')} aria-current={active === c.id ? 'page' : undefined}>
-              {c.name}
+          <nav className="rs-header__nav rs-nav rs-only-desktop" aria-label="الأقسام">
+            <a href={campaign.navHref} className={cx('rs-nav__link rs-nav__link--campaign', active === 'offers' && 'is-active')}>
+              {campaign.navLabel}
             </a>
-          ))}
-        </nav>
-      </header>
+            {navCats.map((c) => (
+              <a key={c.id} href={`/category/${c.slug}/`} className={cx('rs-nav__link', active === c.id && 'is-active')} aria-current={active === c.id ? 'page' : undefined}>
+                {c.name}
+              </a>
+            ))}
+          </nav>
+        </header>
+      </div>
 
       {menu && (
         <div className="rs-overlay" onClick={close}>
@@ -222,7 +237,7 @@ function SearchSheet({ onClose }: { onClose: () => void }) {
                         {p.offer ? ` · ${p.offer}` : ''}
                       </span>
                     </span>
-                    <span className={cx('rs-result__price', p.compareAt && 'is-offer')}>{price(p.price)}</span>
+                    <span className={cx('rs-result__price', !!p.compareAt && 'is-offer')}>{price(p.price)}</span>
                   </a>
                 </li>
               ))}

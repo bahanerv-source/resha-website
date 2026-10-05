@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Children, type ReactNode } from 'react';
 import imageManifest from '../generated/images.json';
 import type { BadgeKey } from '../data/types';
 import { accentParts, cx, num, savingPct } from '../lib/format';
@@ -143,39 +143,50 @@ export function Price({
   );
 }
 
-/* ---------------- Section header ---------------- */
-export function SectionHeader({
-  eyebrow,
-  title,
-  sub,
-  action,
-  start,
-  as: As = 'h2',
-  id,
-}: {
-  eyebrow?: string;
-  title: string;
-  sub?: string;
-  action?: { label: string; href: string };
-  start?: boolean;
-  as?: 'h1' | 'h2';
-  id?: string;
-}) {
+/* ---------------- Section header ----------------
+   Centred title, one quiet line of context, a short rule underneath. */
+export function SectionHeader({ title, sub, as: As = 'h2', id }: { title: string; sub?: string; as?: 'h1' | 'h2'; id?: string }) {
   return (
-    <header className={cx('rs-section-head', start && 'rs-section-head--start')}>
-      {eyebrow && <p className="rs-eyebrow">{eyebrow}</p>}
+    <header className="rs-section-head">
       <As className="rs-display-section" id={id}>
         <Accent text={title} />
       </As>
       {sub && <p className="rs-section-head__sub">{sub}</p>}
-      {start && action ? (
-        <a href={action.href} className="rs-btn rs-btn--text rs-section-head__action">
-          {action.label} <Icon name="arrowFwd" size="sm" />
-        </a>
-      ) : (
-        !start && <span className="rs-rule" aria-hidden="true" />
-      )}
+      <span className="rs-rule" aria-hidden="true" />
     </header>
+  );
+}
+
+/* ---------------- "View all" under a product row ---------------- */
+export function ViewAll({ label, href }: { label: string; href: string }) {
+  return (
+    <div className="rs-viewall">
+      <a href={href} className="rs-btn rs-btn--outline">
+        {label}
+      </a>
+    </div>
+  );
+}
+
+/* ---------------- Horizontal slider ----------------
+   Swipe on phones; arrow buttons on desktop (wired up in src/client.tsx, no React needed). */
+export function Scroller({ label, className, children }: { label: string; className?: string; children: ReactNode }) {
+  return (
+    <div className={cx('rs-scroller', className)} data-scroller="">
+      <div className="rs-scroller__track" role="list" aria-label={label}>
+        {Children.map(children, (c) => (
+          <div role="listitem" className="rs-scroller__item">
+            {c}
+          </div>
+        ))}
+      </div>
+      <button type="button" className="rs-scroller__btn rs-scroller__btn--prev" data-dir="-1" aria-label="السابق" hidden>
+        <Icon name="chevBack" />
+      </button>
+      <button type="button" className="rs-scroller__btn rs-scroller__btn--next" data-dir="1" aria-label="التالي" hidden>
+        <Icon name="chevFwd" />
+      </button>
+    </div>
   );
 }
 

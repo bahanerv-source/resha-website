@@ -5,12 +5,11 @@
  */
 export type HomeSection =
   | { type: 'hero' }
-  | { type: 'offers'; eyebrow?: string; title: string; sub?: string; offers: string[] }
+  | { type: 'offers'; title: string; sub?: string; offers: string[] }
   | { type: 'categories'; title: string; sub?: string }
   | {
       type: 'products';
       id: string;
-      eyebrow?: string;
       title: string;
       sub?: string;
       products: string[];
@@ -20,11 +19,12 @@ export type HomeSection =
       layout?: 'grid' | 'rail';
       /** In-between banner placed after the first row of the grid. */
       strip?: string;
+      /** "View all" button shown under the products. */
       viewAll?: { label: string; href: string };
       tone?: 'cream' | 'ivory';
     }
   | { type: 'banner'; banner: string }
-  | { type: 'bundles'; eyebrow?: string; title: string; sub?: string; bundles: string[] }
+  | { type: 'bundles'; title: string; sub?: string; bundles: string[] }
   | { type: 'trust' }
   | { type: 'about' }
   | { type: 'whatsapp' };
@@ -33,7 +33,6 @@ export const home: HomeSection[] = [
   { type: 'hero' },
   {
     type: 'offers',
-    eyebrow: 'يوم المعلم',
     title: 'العروض الحالية',
     sub: 'عروض مختارة على الهدايا والتكريمات — اختر العرض وخصّص طلبك.',
     offers: ['buy1get1', 'teachers-25', 'buy10get10', 'buy100get100', 'school-packages', 'graduation-20-5'],
@@ -42,7 +41,6 @@ export const home: HomeSection[] = [
   {
     type: 'products',
     id: 'teachers',
-    eyebrow: 'هدايا يوم المعلم',
     title: 'هدايا تقول شكراً',
     sub: 'اختيارات هذا الأسبوع لكل معلم ومعلمة — بالاسم وعبارة الشكر.',
     products: ['teacher-gift-box', 'teacher-thanks-plaque', 'engraved-pen-box', 'acrylic-plaque-wood-base', 'thank-you-mug', 'thank-you-frame', 'desk-nameplate-acrylic', 'teacher-stamp'],
@@ -53,7 +51,6 @@ export const home: HomeSection[] = [
   {
     type: 'products',
     id: 'schools',
-    eyebrow: 'للمدارس ورياض الأطفال',
     title: 'الأكثر طلباً من المدارس',
     sub: 'القطع التي تعود إليها إدارات المدارس في كل حفل تكريم.',
     products: ['wooden-plaque-gold', 'excellence-medal-gold', 'wooden-medal-engraved', 'appreciation-certificate'],
@@ -61,7 +58,6 @@ export const home: HomeSection[] = [
   },
   {
     type: 'bundles',
-    eyebrow: 'وفّر مع الباقات',
     title: 'باقات المدارس',
     sub: 'باقات جاهزة بشعار المدرسة والأسماء، بسعر أقل من شراء كل قطعة وحدها.',
     bundles: ['school-honor-bundle', 'teachers-day-bundle', 'kindergarten-graduation-bundle'],
@@ -70,7 +66,6 @@ export const home: HomeSection[] = [
   {
     type: 'products',
     id: 'new',
-    eyebrow: 'وصل حديثاً',
     title: 'جديد في ريشة',
     sub: 'قطع جديدة صمّمناها لهذا الموسم.',
     products: ['acrylic-plaque-wood-base', 'desk-nameplate-acrylic', 'thank-you-mug', 'kindergarten-graduation-medal', 'graduate-plaque', 'student-name-labels'],

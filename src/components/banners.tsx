@@ -146,39 +146,48 @@ export function InlineStrip({ s }: { s: Strip }) {
   );
 }
 
-/* ---------------- Trusted by schools (placeholders until real logos) ---------------- */
+/* ---------------- Service promises (+ school logos once approved) ----------------
+   Pass `logos` to show the "schools that trust Resha" row above the promises. */
 export function TrustStrip({ logos = [] }: { logos?: { src: string; name: string }[] }) {
-  const slots = Math.max(0, 6 - logos.length);
   return (
     <div className="rs-trust">
-      <header className="rs-section-head">
-        <h2 className="rs-display-section">مدارس تثق بريشة</h2>
-        <p className="rs-section-head__sub">مساحة مخصّصة لشعارات المدارس ورياض الأطفال التي نتشرّف بخدمتها — نضيفها بعد موافقة كل مدرسة.</p>
-        <span className="rs-rule" aria-hidden="true" />
-      </header>
-      <div className="rs-trust__logos">
-        {logos.map((l) => (
-          <div className="rs-trust__logo" key={l.name}>
-            <img src={l.src} alt={l.name} loading="lazy" />
+      {logos.length > 0 && (
+        <>
+          <header className="rs-section-head">
+            <h2 className="rs-display-section">مدارس تثق بريشة</h2>
+            <span className="rs-rule" aria-hidden="true" />
+          </header>
+          <div className="rs-trust__logos">
+            {logos.map((l) => (
+              <div className="rs-trust__logo" key={l.name}>
+                <img src={l.src} alt={l.name} loading="lazy" />
+              </div>
+            ))}
           </div>
-        ))}
-        {Array.from({ length: slots }).map((_, i) => (
-          <div className="rs-trust__logo rs-trust__logo--slot" key={i}>
-            شعار مدرسة
-          </div>
-        ))}
-      </div>
-      <div className="rs-trust__facts">
-        <span>
-          <Icon name="school" /> أسعار خاصة لطلبات المدارس
-        </span>
-        <span>
-          <Icon name="pen" /> تخصيص بشعار المدرسة
-        </span>
-        <span>
-          <Icon name="pin" /> {site.serviceArea}
-        </span>
-      </div>
+        </>
+      )}
+      <ul className="rs-promises">
+        <li>
+          <Icon name="pen" size="lg" />
+          <b>تخصيص بالاسم والشعار</b>
+          <span>كل قطعة تُنفَّذ بالاسم أو العبارة التي تختارها</span>
+        </li>
+        <li>
+          <Icon name="eye" size="lg" />
+          <b>مراجعة قبل التنفيذ</b>
+          <span>نرسل لك التفاصيل لتأكيدها قبل البدء</span>
+        </li>
+        <li>
+          <Icon name="school" size="lg" />
+          <b>أسعار خاصة للمدارس</b>
+          <span>باقات جاهزة وأسعار كميات واضحة</span>
+        </li>
+        <li>
+          <Icon name="truck" size="lg" />
+          <b>توصيل داخل {site.country}</b>
+          <span>{site.serviceArea}</span>
+        </li>
+      </ul>
     </div>
   );
 }

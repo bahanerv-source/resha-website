@@ -1,48 +1,44 @@
 import type { BadgeKey, Category, Offer, Product } from '../data/types';
 import { categoryUrl, productOffer, productUrl } from '../lib/catalog';
-import { cx, dayMonth, num } from '../lib/format';
-import { effectivePiece } from '../lib/pricing';
-import { site } from '../config/site';
+import { cx } from '../lib/format';
 import { Icon } from './Icon';
-import { Badge, Photo, Price } from './ui';
+import { Photo, Price } from './ui';
 
 /* ---------------- Product card ----------------
-   Editorial and quiet: large photograph → name → one offer line → price → simple CTA.
-   At most ONE badge; offers are written as words, never as stickers. */
+   Photograph on white → name → price → one black button.
+   At most one small black label on the photo: the running offer, or "جديد". */
 export function ProductCard({ p, force, priority, sizes }: { p: Product; force?: BadgeKey; priority?: boolean; sizes?: string }) {
   const offer = productOffer(p);
   const promo = !!offer && offer.type !== 'bundle';
-  // One quiet label at most, and only for new arrivals — offers speak through the price line instead.
-  const badge = (p.badges ?? []).includes('new') || force === 'new' ? ('new' as const) : undefined;
+  const isNew = (p.badges ?? []).includes('new') || force === 'new';
+  const tag = promo ? offerLabel(offer!) : isNew ? 'جديد' : undefined;
   const href = productUrl(p);
-  const piece = effectivePiece(p, offer);
   return (
     <article className="rs-card">
       <a href={href} className="rs-card__media" tabIndex={-1} aria-hidden="true">
-        {badge && <Badge kind={badge} />}
-        <Photo src={p.images[0]} alt={p.name} priority={priority} sizes={sizes ?? '(min-width: 1024px) 33vw, 50vw'} />
+        <Photo src={p.images[0]} alt={p.name} priority={priority} sizes={sizes ?? '(min-width: 1024px) 25vw, 50vw'} />
       </a>
+      {tag && <span className="rs-card__tag">{tag}</span>}
       <div className="rs-card__body">
         <h3 className="rs-card__name">
           <a href={href}>{p.name}</a>
         </h3>
-        {promo && (
-          <p className="rs-card__offer">
-            {offer!.title}
-            {piece !== undefined && <span className="rs-card__piece"> · أي {num(piece)} {site.currency} للقطعة</span>}
-          </p>
-        )}
         <Price now={p.price} was={p.compareAt} unit={p.unit && p.unit !== 'للقطعة' ? p.unit : undefined} from={p.priceFrom || !!p.tiers} center save={false} />
       </div>
       <a href={href} className="rs-card__cta">
-        {promo ? 'اختر العرض' : 'خصّص واطلب'}
+        <Icon name="bag" size="sm" /> خصّص واطلب
       </a>
     </article>
   );
 }
 
+/** Short offer label for the photo corner: "1+1 مجاناً", "خصم 25%". */
+function offerLabel(o: Offer) {
+  return o.type === 'percent' ? `خصم ${o.figure}` : `${o.figure} مجاناً`;
+}
+
 /* ---------------- Offer tile (current offers) ----------------
-   Framed photograph + the offer written as a campaign line (no stamp). */
+   Rounded photograph with the offer written underneath. */
 export function OfferTile({ o }: { o: Offer }) {
   return (
     <a href={o.href} className="rs-otile">
@@ -50,7 +46,6 @@ export function OfferTile({ o }: { o: Offer }) {
         <Photo src={o.image} alt="" sizes="(min-width: 1024px) 25vw, 70vw" />
       </span>
       <span className="rs-otile__title">{o.title}</span>
-      <span className="rs-otile__meta">{o.endsAt ? `حتى ${dayMonth(o.endsAt)}` : o.endsLabel ?? 'لفترة محدودة'}</span>
     </a>
   );
 }
@@ -64,7 +59,6 @@ export function BundleCard({ p, reverse }: { p: Product; reverse?: boolean }) {
         <Photo src={p.images[0]} alt={p.name} sizes="(min-width: 1024px) 50vw, 100vw" />
       </a>
       <div className="rs-pack__body">
-        <p className="rs-eyebrow">باقات المدارس</p>
         <h3 className="rs-pack__title">
           <a href={href}>{p.name}</a>
         </h3>

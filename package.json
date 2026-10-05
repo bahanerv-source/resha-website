@@ -12,6 +12,7 @@
     "placeholders": "python3 scripts/placeholders.py"
   },
   "dependencies": {
+    "@fontsource-variable/readex-pro": "^5.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

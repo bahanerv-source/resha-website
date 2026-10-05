@@ -7,8 +7,7 @@ import { productsBySlugs } from '../lib/catalog';
 import { cx } from '../lib/format';
 import { AboutBlock, CampaignBanner, CountdownBand, Hero, InlineStrip, TrustStrip, WhatsAppSection } from '../components/banners';
 import { BundleCard, CategoryCard, OfferTile, ProductCard } from '../components/cards';
-import { Island } from '../components/Island';
-import { Section, SectionHeader } from '../components/ui';
+import { Scroller, Section, SectionHeader, ViewAll } from '../components/ui';
 
 /** Builds the homepage from src/data/home.ts. */
 export function HomePage() {
@@ -33,12 +32,12 @@ export function HomePage() {
             const list = s.offers.map((id) => getOffer(id)!).filter(Boolean);
             return (
               <Section key={idx} tone={nextTone()} labelledBy="h-offers">
-                <SectionHeader eyebrow={s.eyebrow} title={s.title} sub={s.sub} id="h-offers" />
-                <div className="rs-otiles">
+                <SectionHeader title={s.title} sub={s.sub} id="h-offers" />
+                <Scroller label={s.title} className="rs-scroller--offers">
                   {list.map((o) => (
                     <OfferTile o={o} key={o.id} />
                   ))}
-                </div>
+                </Scroller>
               </Section>
             );
           }
@@ -62,9 +61,13 @@ export function HomePage() {
             const hid = `h-${s.id}`;
             return (
               <Section key={idx} tone={t} labelledBy={hid}>
-                <SectionHeader eyebrow={s.eyebrow} title={s.title} sub={s.sub} id={hid} start={!!s.viewAll || s.layout === 'rail'} action={s.viewAll} />
+                <SectionHeader title={s.title} sub={s.sub} id={hid} />
                 {s.layout === 'rail' ? (
-                  <Island name="ProductRail" props={{ slugs: s.products, force: s.rowBadge, label: s.title }} />
+                  <Scroller label={s.title} className="rs-scroller--products">
+                    {ps.map((p) => (
+                      <ProductCard p={p} force={s.rowBadge} key={p.slug} />
+                    ))}
+                  </Scroller>
                 ) : (
                   <div className="rs-grid">
                     {ps.map((p, i) => (
@@ -79,6 +82,7 @@ export function HomePage() {
                     )}
                   </div>
                 )}
+                {s.viewAll && <ViewAll {...s.viewAll} />}
               </Section>
             );
           }
@@ -97,7 +101,7 @@ export function HomePage() {
             const bs = productsBySlugs(s.bundles);
             return (
               <Section key={idx} labelledBy="h-bundles" id="bundles">
-                <SectionHeader eyebrow={s.eyebrow} title={s.title} sub={s.sub} id="h-bundles" />
+                <SectionHeader title={s.title} sub={s.sub} id="h-bundles" />
                 <div className="rs-packs">
                   {bs.map((b) => (
                     <BundleCard p={b} key={b.slug} />
@@ -109,7 +113,7 @@ export function HomePage() {
 
           case 'trust':
             return (
-              <section className="rs-section" key={idx}>
+              <section className="rs-section rs-section--tight" key={idx}>
                 <div className="rs-container">
                   <TrustStrip />
                 </div>

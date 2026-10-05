@@ -68,7 +68,7 @@ export const products: Product[] = [
     name: 'درع خشبي بلوحة ذهبية محفورة',
     category: 'plaques',
     alsoIn: ['school'],
-    images: [`${PH}/plaque-walnut.svg`, `${PH}/campaign-teachers-wide.svg`, `${PH}/school-bundle.svg`],
+    images: ['/images/products/wooden-plaque-box.webp'],
     price: 12,
     tiers: [
       { min: 1, price: 12 },
@@ -440,6 +440,22 @@ export const products: Product[] = [
     fields: [{ key: 'occasion' }, { key: 'recipient', label: 'الاسم على الغطاء', required: true }, { key: 'text', maxLength: 60 }],
     occasions: ['عيد ميلاد', 'زواج', 'مولود جديد', 'رمضان والعيد', 'مناسبة أخرى'],
   },
+  {
+    slug: 'calligraphy-led-lamp',
+    name: 'مصباح أكريليك مضيء بالخط العربي',
+    category: 'custom',
+    images: ['/images/products/calligraphy-led-lamp.webp'],
+    price: 15, // sample price — set the real one
+    badges: ['new'],
+    note: 'بالعبارة أو الاسم',
+    description: 'لوحة أكريليك محفورة بعبارة أو اسم بالخط العربي، تضيء على قاعدة LED — هدية أنيقة للمكتب أو غرفة النوم.',
+    details: ['أكريليك شفاف محفور بالليزر', 'قاعدة LED بزر تشغيل', 'العبارة أو الاسم الذي تختاره'],
+    fields: [
+      { key: 'occasion' },
+      { key: 'text', label: 'العبارة أو الاسم', required: true, maxLength: 60, placeholder: 'مثال: وكان فضل الله عليك عظيماً' },
+    ],
+    occasions: ['عيد ميلاد', 'تخرّج', 'رمضان والعيد', 'هدية شكر', 'مناسبة أخرى'],
+  },
 
   /* ---------------- علّاقات مفاتيح ---------------- */
   {
@@ -459,7 +475,7 @@ export const products: Product[] = [
     slug: 'wooden-keychain-engraved',
     name: 'علّاقة مفاتيح خشبية محفورة',
     category: 'keychains',
-    images: [`${PH}/keychain-wood.svg`],
+    images: ['/images/products/football-keychain.webp'],
     price: 2.5,
     tiers: [
       { min: 1, price: 2.5 },

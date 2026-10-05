@@ -3,7 +3,7 @@ import { getCampaign } from '../data/campaigns';
 import { offers } from '../data/offers';
 import { productsInOffer } from '../lib/catalog';
 import { dayMonth } from '../lib/format';
-import { PageHero, WhatsAppSection } from '../components/banners';
+import { artFocus, PageHero, WhatsAppSection } from '../components/banners';
 import { BundleCard, OfferTile, ProductCard } from '../components/cards';
 import { Island } from '../components/Island';
 import { Section, SectionHeader } from '../components/ui';
@@ -17,8 +17,10 @@ export function OffersPage() {
           eyebrow={c.eyebrow}
           title="العروض [الحالية]"
           intro="كل العروض في مكان واحد: اختر العرض، خصّص القطعة بالاسم، وأرسل طلبك عبر واتساب."
-          image={c.image}
+          image={c.artwork?.src ?? c.image}
           imageAlt={c.imageAlt}
+          focus={c.artwork ? artFocus(c.artwork) : undefined}
+          href={c.artwork ? '#h-all' : undefined}
           crumbs={[{ label: 'الرئيسية', href: '/' }, { label: 'العروض' }]}
         >
           {c.endsAt && <Island name="Countdown" props={{ endsAt: c.endsAt, label: 'عروض المناسبة تنتهي خلال' }} />}

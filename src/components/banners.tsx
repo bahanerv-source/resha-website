@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
-import type { Banner, Campaign, Strip } from '../data/types';
+import type { Artwork, Banner, Campaign, Strip } from '../data/types';
 import { site } from '../config/site';
 import { cx } from '../lib/format';
 import { waGeneral } from '../lib/whatsapp';
 import { Icon } from './Icon';
 import { Island } from './Island';
-import { Accent, Photo, WhatsAppButton } from './ui';
+import { Accent, Photo, Scroller, WhatsAppButton } from './ui';
 
 /* ---------------- Seasonal hero ----------------
    A full-bleed campaign: one big photograph, one headline, one sentence, one action. */
@@ -33,6 +33,32 @@ export function Hero({ c, h1 = true }: { c: Campaign; h1?: boolean }) {
   );
 }
 
+/* ---------------- Homepage hero: designed banners ----------------
+   Each banner already carries its headline and button, so the whole picture is the link.
+   Phones show a taller crop toward the side that holds the text. */
+export function HeroBanners({ title, slides }: { title: string; slides: { artwork: Artwork; alt: string; href: string }[] }) {
+  const items = slides.map((s, i) => (
+    <a href={s.href} className="rs-heroart" key={s.artwork.src}>
+      <Photo src={s.artwork.src} alt={s.alt} priority={i === 0} eager sizes="100vw" focus={artFocus(s.artwork)} />
+    </a>
+  ));
+  return (
+    <section className="rs-herobanners" aria-label={title}>
+      <h1 className="rs-visually-hidden">{title}</h1>
+      {items.length > 1 ? (
+        <Scroller label={title} className="rs-scroller--hero" dots autoplay>
+          {items}
+        </Scroller>
+      ) : (
+        items
+      )}
+    </section>
+  );
+}
+
+/** object-position that keeps a banner's text in view when it is cropped. */
+export const artFocus = (a: Artwork) => (a.textSide === 'right' ? '100% 50%' : '0% 50%');
+
 /* ---------------- Countdown band (real deadlines only) ---------------- */
 export function CountdownBand({ title, endsAt }: { title: string; endsAt: string }) {
   return (
@@ -50,6 +76,8 @@ export function PageHero({
   intro,
   image,
   imageAlt = '',
+  focus = '22% 50%',
+  href,
   crumbs,
   children,
 }: {
@@ -58,14 +86,24 @@ export function PageHero({
   intro: string;
   image: string;
   imageAlt?: string;
+  /** CSS object-position for the header picture. */
+  focus?: string;
+  /** Makes the picture a link (for designed banners that show a button). */
+  href?: string;
   crumbs?: { label: string; href?: string }[];
   children?: ReactNode;
 }) {
   return (
     <header className="rs-phead">
-      <div className="rs-phead__media">
-        <Photo src={image} alt={imageAlt} priority focus="22% 50%" sizes="100vw" />
-      </div>
+      {href ? (
+        <a href={href} className="rs-phead__media">
+          <Photo src={image} alt={imageAlt} priority focus={focus} sizes="100vw" />
+        </a>
+      ) : (
+        <div className="rs-phead__media">
+          <Photo src={image} alt={imageAlt} priority focus={focus} sizes="100vw" />
+        </div>
+      )}
       <div className="rs-container rs-phead__text">
         {crumbs && <Crumbs items={crumbs} />}
         <p className="rs-eyebrow">{eyebrow}</p>

@@ -1,4 +1,40 @@
 {
+ "/images/banners/collection.webp": {
+  "w": 2000,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/banners/collection-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/banners/collection-960.webp"
+   },
+   {
+    "w": 1600,
+    "src": "/_img/images/banners/collection-1600.webp"
+   }
+  ]
+ },
+ "/images/banners/teachers-day.webp": {
+  "w": 2000,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/banners/teachers-day-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/banners/teachers-day-960.webp"
+   },
+   {
+    "w": 1600,
+    "src": "/_img/images/banners/teachers-day-1600.webp"
+   }
+  ]
+ },
  "/images/placeholders/acrylic-photo.svg": {
   "w": 800,
   "h": 1000
@@ -118,6 +154,60 @@
  "/images/placeholders/wooden-medal.svg": {
   "w": 800,
   "h": 1000
+ },
+ "/images/products/calligraphy-led-lamp.webp": {
+  "w": 1254,
+  "h": 1254,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/calligraphy-led-lamp-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/products/calligraphy-led-lamp-960.webp"
+   },
+   {
+    "w": 1254,
+    "src": "/_img/images/products/calligraphy-led-lamp-1254.webp"
+   }
+  ]
+ },
+ "/images/products/football-keychain.webp": {
+  "w": 1254,
+  "h": 1254,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/football-keychain-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/products/football-keychain-960.webp"
+   },
+   {
+    "w": 1254,
+    "src": "/_img/images/products/football-keychain-1254.webp"
+   }
+  ]
+ },
+ "/images/products/wooden-plaque-box.webp": {
+  "w": 1254,
+  "h": 1254,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/wooden-plaque-box-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/products/wooden-plaque-box-960.webp"
+   },
+   {
+    "w": 1254,
+    "src": "/_img/images/products/wooden-plaque-box-1254.webp"
+   }
+  ]
  },
  "/images/products-ph/acrylic-photo.svg": {
   "w": 800,

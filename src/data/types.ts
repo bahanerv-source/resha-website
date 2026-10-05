@@ -189,6 +189,28 @@ export interface Campaign {
   promises: string[];
   /** Real deadline → a countdown appears in the hero. */
   endsAt?: string;
+  /**
+   * Optional finished banner design with the headline and button drawn into the picture.
+   * When set, the homepage hero (and the offers page header) show it as-is instead of
+   * placing text over `image`, and the whole banner links to `primary.href`.
+   */
+  artwork?: Artwork;
+}
+
+/** A designed banner (about 3:1, e.g. 2000×667) whose text is part of the picture. */
+export interface Artwork {
+  src: string;
+  /** Which side holds the text — phones crop the banner toward it. */
+  textSide: 'left' | 'right';
+}
+
+/** An extra designed banner in the homepage slider, shown after the current campaign. */
+export interface HeroSlide {
+  id: string;
+  artwork: Artwork;
+  /** What the banner says, for screen readers and search engines. */
+  alt: string;
+  href: string;
 }
 
 export interface Banner {

@@ -1,4 +1,4 @@
-import type { Banner, Campaign, Strip } from './types';
+import type { Banner, Campaign, HeroSlide, Strip } from './types';
 
 const PH = '/images/placeholders';
 
@@ -16,6 +16,7 @@ export const campaigns: Campaign[] = [
     sub: 'دروع وهدايا مخصّصة بالاسم لكل معلم ومعلمة، مع عروض خاصة للمدارس طوال أسبوع المعلم.',
     image: `${PH}/hero-teachers.svg`,
     imageFocus: '16% 50%',
+    artwork: { src: '/images/banners/teachers-day.webp', textSide: 'right' },
     imageAlt: 'درع خشبي وميدالية ذهبية وصندوق هدية على طاولة خشبية',
     tone: 'light',
     primary: { label: 'تسوّق عروض المعلم', href: '/offers/' },
@@ -51,6 +52,19 @@ export const campaigns: Campaign[] = [
     primary: { label: 'تسوّق منتجات المدارس', href: '/category/school/' },
     secondary: { label: 'المطبوعات', href: '/category/prints/' },
     promises: ['بشعار المدرسة', 'أسعار كميات واضحة', 'توصيل داخل الأردن'],
+  },
+];
+
+/**
+ * Extra designed banners for the homepage slider (after the current campaign's banner).
+ * Pick which ones show, and their order, in src/data/home.ts → hero → slides.
+ */
+export const heroSlides: HeroSlide[] = [
+  {
+    id: 'collection',
+    artwork: { src: '/images/banners/collection.webp', textSide: 'left' },
+    alt: 'تشكيلة مميزة من منتجات ريشة: دروع، هدايا مخصصة، ميداليات ومفاتيح بتصاميم أنيقة ولمسات خاصة لكل مناسبة',
+    href: '/#categories',
   },
 ];
 
@@ -135,3 +149,4 @@ export const strips: Strip[] = [
 export const getCampaign = (id: string) => campaigns.find((c) => c.id === id) ?? campaigns[0];
 export const getBanner = (id: string) => banners.find((b) => b.id === id);
 export const getStrip = (id?: string) => (id ? strips.find((s) => s.id === id) : undefined);
+export const getHeroSlide = (id: string) => heroSlides.find((s) => s.id === id);

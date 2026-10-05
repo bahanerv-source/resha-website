@@ -1,13 +1,16 @@
 import { site } from '../config/site';
-import { getBanner, getCampaign, getStrip } from '../data/campaigns';
+import { getBanner, getCampaign, getHeroSlide, getStrip } from '../data/campaigns';
 import { categories } from '../data/categories';
 import { home } from '../data/home';
 import { getOffer } from '../data/offers';
 import { productsBySlugs } from '../lib/catalog';
 import { cx } from '../lib/format';
-import { AboutBlock, CampaignBanner, CountdownBand, Hero, InlineStrip, TrustStrip, WhatsAppSection } from '../components/banners';
+import { AboutBlock, CampaignBanner, CountdownBand, Hero, HeroBanners, InlineStrip, TrustStrip, WhatsAppSection } from '../components/banners';
 import { BundleCard, CategoryCard, OfferTile, ProductCard } from '../components/cards';
 import { Scroller, Section, SectionHeader, ViewAll } from '../components/ui';
+
+/** Headline without the [accent] brackets. */
+const plain = (t: string) => t.replace(/[[\]]/g, '');
 
 /** Builds the homepage from src/data/home.ts. */
 export function HomePage() {
@@ -20,9 +23,15 @@ export function HomePage() {
         switch (s.type) {
           case 'hero': {
             const c = getCampaign(site.currentCampaign);
+            const slides = c.artwork
+              ? [
+                  { artwork: c.artwork, alt: `${plain(c.headline)} — ${c.sub}`, href: c.primary.href },
+                  ...(s.slides ?? []).map(getHeroSlide).filter((x) => !!x),
+                ]
+              : [];
             return (
               <div key={idx}>
-                <Hero c={c} />
+                {c.artwork ? <HeroBanners title={plain(c.headline)} slides={slides} /> : <Hero c={c} />}
                 {c.endsAt && <CountdownBand title={`${c.navLabel} تنتهي خلال`} endsAt={c.endsAt} />}
               </div>
             );
@@ -44,7 +53,7 @@ export function HomePage() {
 
           case 'categories':
             return (
-              <Section key={idx} labelledBy="h-cats">
+              <Section key={idx} labelledBy="h-cats" id="categories">
                 <SectionHeader title={s.title} sub={s.sub} id="h-cats" />
                 <div className="rs-ctiles">
                   {categories.map((c) => (

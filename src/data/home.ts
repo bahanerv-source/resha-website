@@ -4,7 +4,8 @@
  * The hero always shows the campaign selected in src/config/site.ts → currentCampaign.
  */
 export type HomeSection =
-  | { type: 'hero' }
+  /** The current campaign; `slides` adds designed banners (ids from campaigns.ts → heroSlides) after it. */
+  | { type: 'hero'; slides?: string[] }
   | { type: 'offers'; title: string; sub?: string; offers: string[] }
   | { type: 'categories'; title: string; sub?: string }
   | {
@@ -30,7 +31,7 @@ export type HomeSection =
   | { type: 'whatsapp' };
 
 export const home: HomeSection[] = [
-  { type: 'hero' },
+  { type: 'hero', slides: ['collection'] },
   {
     type: 'offers',
     title: 'العروض الحالية',
@@ -68,7 +69,7 @@ export const home: HomeSection[] = [
     id: 'new',
     title: 'جديد في ريشة',
     sub: 'قطع جديدة صمّمناها لهذا الموسم.',
-    products: ['acrylic-plaque-wood-base', 'desk-nameplate-acrylic', 'thank-you-mug', 'kindergarten-graduation-medal', 'graduate-plaque', 'student-name-labels'],
+    products: ['calligraphy-led-lamp', 'acrylic-plaque-wood-base', 'desk-nameplate-acrylic', 'thank-you-mug', 'kindergarten-graduation-medal', 'graduate-plaque', 'student-name-labels'],
     rowBadge: 'new',
     layout: 'rail',
   },

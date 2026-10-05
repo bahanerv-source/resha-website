@@ -14,6 +14,7 @@ export function Photo({
   alt,
   sizes = '(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw',
   priority,
+  eager,
   className,
   focus,
 }: {
@@ -21,6 +22,8 @@ export function Photo({
   alt: string;
   sizes?: string;
   priority?: boolean;
+  /** Load right away without raising priority (e.g. slides that are off to the side). */
+  eager?: boolean;
   className?: string;
   /** CSS object-position */
   focus?: string;
@@ -35,7 +38,7 @@ export function Photo({
       width={m?.w}
       height={m?.h}
       alt={alt}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority || eager ? 'eager' : 'lazy'}
       decoding="async"
       fetchPriority={priority ? 'high' : undefined}
       className={className}
@@ -169,13 +172,27 @@ export function ViewAll({ label, href }: { label: string; href: string }) {
 }
 
 /* ---------------- Horizontal slider ----------------
-   Swipe on phones; arrow buttons on desktop (wired up in src/client.tsx, no React needed). */
-export function Scroller({ label, className, children }: { label: string; className?: string; children: ReactNode }) {
+   Swipe on phones; arrow buttons on desktop; optional dots and autoplay for the hero.
+   All behaviour is wired up in src/client.tsx (no React needed). */
+export function Scroller({
+  label,
+  className,
+  dots,
+  autoplay,
+  children,
+}: {
+  label: string;
+  className?: string;
+  dots?: boolean;
+  autoplay?: boolean;
+  children: ReactNode;
+}) {
+  const items = Children.toArray(children);
   return (
-    <div className={cx('rs-scroller', className)} data-scroller="">
+    <div className={cx('rs-scroller', className)} data-scroller="" data-autoplay={autoplay ? '' : undefined}>
       <div className="rs-scroller__track" role="list" aria-label={label}>
-        {Children.map(children, (c) => (
-          <div role="listitem" className="rs-scroller__item">
+        {items.map((c, i) => (
+          <div role="listitem" className="rs-scroller__item" key={i}>
             {c}
           </div>
         ))}
@@ -186,6 +203,13 @@ export function Scroller({ label, className, children }: { label: string; classN
       <button type="button" className="rs-scroller__btn rs-scroller__btn--next" data-dir="1" aria-label="التالي" hidden>
         <Icon name="chevFwd" />
       </button>
+      {dots && items.length > 1 && (
+        <div className="rs-scroller__dots">
+          {items.map((_, i) => (
+            <button type="button" className={cx('rs-scroller__dot', i === 0 && 'is-active')} data-index={i} aria-label={`الشريحة ${i + 1}`} key={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

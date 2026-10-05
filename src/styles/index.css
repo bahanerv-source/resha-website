@@ -1,5 +1,6 @@
 /* Order matters: font → design tokens → design-system components → site layout → theme. */
-@import '@fontsource-variable/readex-pro/wght.css';
+@import '@fontsource-variable/noto-sans-arabic/wght.css';
+@import '@fontsource-variable/noto-naskh-arabic/wght.css';
 @import './tokens.css';
 @import './ds.css';
 @import './site.css';

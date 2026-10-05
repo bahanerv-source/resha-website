@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E2A27"></stop><stop offset="1" stop-color="#22201E"></stop></linearGradient>
+<radialGradient id="glow" cx=".62" cy=".32" r=".6"><stop offset="0" stop-color="#D8BC84" stop-opacity="0.16"></stop><stop offset="1" stop-color="#D8BC84" stop-opacity="0"></stop></radialGradient>
+<radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22201E" stop-opacity=".35"></stop><stop offset="1" stop-color="#22201E" stop-opacity="0"></stop></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6CF9C"></stop><stop offset=".45" stop-color="#C7A15B"></stop><stop offset="1" stop-color="#8C6A2E"></stop></linearGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3622"></stop><stop offset=".5" stop-color="#7A4E2D"></stop><stop offset="1" stop-color="#4E2E1C"></stop></linearGradient>
+<linearGradient id="burg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A2E3C"></stop><stop offset="1" stop-color="#4C121C"></stop></linearGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#wall)"></rect>
+<rect width="800" height="1000" fill="url(#glow)"></rect>
+<ellipse cx="400" cy="760" rx="260" ry="26" fill="#000" opacity=".35"></ellipse>
+<rect x="190" y="640" width="420" height="80" rx="40" fill="#F7F1E8" transform="rotate(-8 400 680)"></rect>
+<circle cx="604" cy="652" r="40" fill="#E8DFD3" transform="rotate(-8 400 680)"></circle>
+<rect x="360" y="630" width="30" height="100" fill="#6B1F2B" transform="rotate(-8 400 680)"></rect>
+<path d="M400 230 L640 330 L400 430 L160 330 Z" fill="#141210"></path>
+<path d="M290 380 V480 C290 520 510 520 510 480 V380 L400 430 Z" fill="#1B1816"></path>
+<circle cx="400" cy="330" r="10" fill="#C7A15B"></circle>
+<path d="M400 330 L560 380 V500" fill="none" stroke="#C7A15B" stroke-width="6"></path>
+<path d="M548 500 h24 l8 70 h-40 Z" fill="#C7A15B"></path></svg>

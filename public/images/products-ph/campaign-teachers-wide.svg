@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700"><defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F6F4F1"/></linearGradient>
+<radialGradient id="glow" cx=".62" cy=".32" r=".6"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22201E" stop-opacity=".35"></stop><stop offset="1" stop-color="#22201E" stop-opacity="0"></stop></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6CF9C"></stop><stop offset=".45" stop-color="#C7A15B"></stop><stop offset="1" stop-color="#8C6A2E"></stop></linearGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3622"></stop><stop offset=".5" stop-color="#7A4E2D"></stop><stop offset="1" stop-color="#4E2E1C"></stop></linearGradient>
+<linearGradient id="burg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A2E3C"></stop><stop offset="1" stop-color="#4C121C"></stop></linearGradient>
+</defs>
+<rect width="1600" height="700" fill="url(#wall)"></rect>
+<rect width="1600" height="700" fill="url(#glow)"></rect>
+
+
+<rect x="0" y="560" width="1600" height="140" fill="#EFECE8"></rect>
+<rect x="0" y="560" width="1600" height="6" fill="#EFECE8" opacity=".5"></rect>
+<ellipse cx="420" cy="572" rx="260" ry="18" fill="url(#shadow)"></ellipse>
+<rect x="250" y="180" width="260" height="390" rx="12" fill="url(#wood)" transform="rotate(-4 380 375)"></rect>
+<rect x="290" y="230" width="180" height="250" rx="4" fill="url(#gold)" transform="rotate(-4 380 375)"></rect>
+<circle cx="640" cy="440" r="110" fill="url(#gold)"></circle>
+<path d="M590 200 L640 330 L690 200 Z" fill="#ECE3D5" opacity=".9"></path>
+<rect x="760" y="330" width="120" height="240" rx="6" fill="#ECE3D5"></rect>
+<rect x="780" y="380" width="80" height="8" rx="4" fill="#C7A15B"></rect></svg>

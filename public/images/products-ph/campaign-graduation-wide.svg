@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700"><defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F6F4F1"/></linearGradient>
+<radialGradient id="glow" cx=".62" cy=".32" r=".6"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22201E" stop-opacity=".35"/><stop offset="1" stop-color="#22201E" stop-opacity="0"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6CF9C"/><stop offset=".45" stop-color="#C7A15B"/><stop offset="1" stop-color="#8C6A2E"/></linearGradient>
+<linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2F2EE"/><stop offset=".5" stop-color="#C9CCCF"/><stop offset="1" stop-color="#8E9296"/></linearGradient>
+<linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E2B48A"/><stop offset=".5" stop-color="#A86B3C"/><stop offset="1" stop-color="#6E4222"/></linearGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3622"/><stop offset=".5" stop-color="#7A4E2D"/><stop offset="1" stop-color="#4E2E1C"/></linearGradient>
+<linearGradient id="lightwood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9B98C"/><stop offset="1" stop-color="#A97E50"/></linearGradient>
+<linearGradient id="burg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A2E3C"/><stop offset="1" stop-color="#4C121C"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".85"/><stop offset=".5" stop-color="#E9EEF0" stop-opacity=".55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".75"/></linearGradient>
+</defs><rect width="1600" height="700" fill="url(#wall)"/><rect width="1600" height="700" fill="url(#glow)"/><rect x="0" y="560" width="1600" height="140" fill="#EFECE8"/><rect x="0" y="560" width="1600" height="6" fill="#EFECE8" opacity=".5"/><ellipse cx="520" cy="572" rx="380" ry="20" fill="url(#shadow)"/>
+<path d="M150 560 L300 330 L450 560" fill="none" stroke="url(#burg)" stroke-width="70"/>
+<rect x="420" y="250" width="220" height="320" rx="10" fill="url(#wood)" transform="rotate(-4 530 410)"/><rect x="455" y="295" width="150" height="200" rx="4" fill="url(#gold)" transform="rotate(-4 530 410)"/>
+<path d="M640 300 L800 240 L960 300 L800 360Z" fill="#22201E" stroke="#C7A15B" stroke-width="3"/><rect x="730" y="320" width="140" height="70" rx="10" fill="#22201E"/><path d="M800 300 L900 330 L905 420" fill="none" stroke="#C7A15B" stroke-width="5"/>
+<rect x="700" y="500" width="260" height="56" rx="28" fill="#F1EADF"/><rect x="760" y="500" width="14" height="56" fill="#6B1F2B"/></svg>

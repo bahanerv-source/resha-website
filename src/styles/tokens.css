@@ -1,0 +1,83 @@
+/* ريشة design tokens — generated from the design system's tokens.json (scripts/tokens.py). Do not hand-edit values here: change tokens.source.json and regenerate. */
+:root {
+  /* Colour */
+  --burgundy: #6B1F2B;
+  --burgundy-deep: #4C121C;
+  --burgundy-soft: #8A2E3C;
+  --burgundy-tint: #F3E6E3;
+  --gold: #C7A15B;
+  --gold-soft: #D8BC84;
+  --gold-ink: #7A5A22;
+  --gold-tint: #F3E9D4;
+  --cream: #FCF8F2;
+  --ivory: #F7F1E8;
+  --white: #FFFFFF;
+  --sand: #EFE6D8;
+  --brown: #3A2B26;
+  --charcoal: #22201E;
+  --text-strong: var(--charcoal);
+  --text: var(--brown);
+  --text-muted: #6E625B;
+  --text-brand: var(--burgundy);
+  --text-on-dark: var(--ivory);
+  --text-on-dark-muted: #D9C9BF;
+  --border: #E8DFD3;
+  --border-strong: #D6C8B6;
+  --border-control: #8F7F70;
+  --border-on-dark: rgba(247, 241, 232, 0.24);
+  --price: var(--charcoal);
+  --price-offer: #A3222F;
+  --price-offer-tint: #FBEAE8;
+  --whatsapp: #167A47;
+  --whatsapp-hover: #0F6E45;
+  --whatsapp-tint: #E7F3EC;
+  --success: #2F6B3F;
+  --success-tint: #E8F1EA;
+  --warning: #8A5A0E;
+  --warning-tint: #F8EEDB;
+  --error: #B42318;
+  --error-tint: #FBEAE8;
+  --info: #2D5B7A;
+  --info-tint: #E8EFF4;
+  --focus-ring: var(--burgundy);
+  --disabled-bg: #EEE7DD;
+  --disabled-text: #9A8A7A;
+  --scrim: rgba(34, 32, 30, 0.55);
+  /* Type */
+  --font-display: Rakkas, "Aref Ruqaa", "Noto Naskh Arabic", serif;
+  --font-ui: Alexandria, "Noto Sans Arabic", Tahoma, sans-serif;
+  /* Space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-20: 80px;
+  --space-24: 96px;
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-banner: 24px;
+  --radius-round: 999px;
+  /* Shadow */
+  --shadow-xs: 0 1px 2px rgba(58, 43, 38, 0.06);
+  --shadow-sm: 0 1px 2px rgba(58, 43, 38, 0.04), 0 4px 12px rgba(58, 43, 38, 0.06);
+  --shadow-md: 0 2px 6px rgba(58, 43, 38, 0.05), 0 12px 28px rgba(58, 43, 38, 0.09);
+  --shadow-lg: 0 4px 12px rgba(58, 43, 38, 0.06), 0 24px 56px rgba(58, 43, 38, 0.14);
+  --shadow-focus: 0 0 0 2px #FCF8F2, 0 0 0 4px #6B1F2B;
+  --shadow-focus-dark: 0 0 0 2px #4C121C, 0 0 0 4px #D8BC84;
+  /* Layout */
+  --container-max: 1280px;
+  --container-narrow: 760px;
+  --gutter-mobile: 16px;
+  --gutter-desktop: 32px;
+  --header-mobile: 64px;
+  --header-desktop: 148px;
+  --tap-min: 44px;
+}

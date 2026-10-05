@@ -1,0 +1,28 @@
+{
+  "name": "risha-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ريشة — موقع الهدايا والتكريمات المخصّصة (عربي، RTL، طلب عبر واتساب)",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/dev.mjs",
+    "typecheck": "tsc --noEmit",
+    "placeholders": "python3 scripts/placeholders.py"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "esbuild": "^0.25.0",
+    "sharp": "^0.34.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

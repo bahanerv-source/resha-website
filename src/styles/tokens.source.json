@@ -1,0 +1,590 @@
+{
+ "name": "ريشة",
+ "version": 1,
+ "color": {
+  "themes": [
+   {
+    "id": "light",
+    "name": "Warm light"
+   }
+  ],
+  "tokens": [
+   {
+    "name": "burgundy",
+    "value": "#6B1F2B",
+    "usage": "Primary brand colour. Primary buttons, active nav, brand text and headlines' accent words, offer stamps, focus ring. Ivory text on it is 10:1."
+   },
+   {
+    "name": "burgundy-deep",
+    "value": "#4C121C",
+    "usage": "Pressed/hover state of burgundy fills; announcement bar, dark campaign bands, footer. Ivory text 13:1, soft gold text 8:1."
+   },
+   {
+    "name": "burgundy-soft",
+    "value": "#8A2E3C",
+    "usage": "Lighter burgundy for illustration, fabric tones in banners and the hover of burgundy on dark bands. Ivory text 7.4:1. Never as body text colour."
+   },
+   {
+    "name": "burgundy-tint",
+    "value": "#F3E6E3",
+    "usage": "Tinted ground for the 'مفضل للمدارس' badge, selected radio cards and school-package panels. Burgundy text on it 9.3:1."
+   },
+   {
+    "name": "gold",
+    "value": "#C7A15B",
+    "usage": "Muted gold ACCENT only: ornament rules, the thin frame inside offer stamps, icons on dark grounds, star ratings. Fails as text on light grounds (2.2:1) — never use it for text on cream/ivory/white. On burgundy it is 4.7:1 (text OK)."
+   },
+   {
+    "name": "gold-soft",
+    "value": "#D8BC84",
+    "usage": "Gold for text and lines on dark grounds (burgundy 6.2:1, burgundy-deep 8.1:1, charcoal 8.9:1): eyebrows and prices on campaign banners, the 'لفترة محدودة' badge label."
+   },
+   {
+    "name": "gold-ink",
+    "value": "#7A5A22",
+    "usage": "Gold-family TEXT on light grounds (ivory 5.6:1, gold-tint 5.3:1): eyebrows, the 'الأكثر طلباً' badge label."
+   },
+   {
+    "name": "gold-tint",
+    "value": "#F3E9D4",
+    "usage": "Warm gold-tinted ground: 'الأكثر طلباً' badge, secondary button, offer-condition panels."
+   },
+   {
+    "name": "cream",
+    "value": "#FCF8F2",
+    "usage": "Default page background. Everything sits on cream unless a section needs separation."
+   },
+   {
+    "name": "ivory",
+    "value": "#F7F1E8",
+    "usage": "Alternate section background (every other homepage band), card bodies on cream, text on dark fills."
+   },
+   {
+    "name": "white",
+    "value": "#FFFFFF",
+    "usage": "Input fields, product cards that need lift on ivory, cut-out product photography grounds."
+   },
+   {
+    "name": "sand",
+    "value": "#EFE6D8",
+    "usage": "Photo backdrop / media placeholder behind product images; quiet band behind trust strips."
+   },
+   {
+    "name": "brown",
+    "value": "#3A2B26",
+    "usage": "Warm dark neutral: default body text on cream/ivory/white (12:1+), wood and floor tones in imagery."
+   },
+   {
+    "name": "charcoal",
+    "value": "#22201E",
+    "usage": "Strongest ink: headings, product titles, prices, the 'جديد' badge fill. 15:1 on cream."
+   },
+   {
+    "name": "text-strong",
+    "value": "{charcoal}",
+    "usage": "Headings, product names, prices — on cream, ivory, white, sand."
+   },
+   {
+    "name": "text",
+    "value": "{brown}",
+    "usage": "Body copy, descriptions, form values — on cream, ivory, white, sand."
+   },
+   {
+    "name": "text-muted",
+    "value": "#6E625B",
+    "usage": "Secondary text: helper text, captions, category labels, old (struck) prices — on cream 5.6:1, ivory 5.3:1, white 5.9:1, sand 4.8:1, gold-tint 4.9:1. Refined from #7A6E67, which fell to 4.4:1 on ivory."
+   },
+   {
+    "name": "text-brand",
+    "value": "{burgundy}",
+    "usage": "Brand-coloured text: links, text buttons, active category, accent word in a headline — on any light ground."
+   },
+   {
+    "name": "text-on-dark",
+    "value": "{ivory}",
+    "usage": "Text on burgundy, burgundy-deep, charcoal, brown and photo scrims."
+   },
+   {
+    "name": "text-on-dark-muted",
+    "value": "#D9C9BF",
+    "usage": "Secondary text on burgundy (7:1) and burgundy-deep (9.3:1)."
+   },
+   {
+    "name": "border",
+    "value": "#E8DFD3",
+    "usage": "Hairlines: card dividers, section rules, table rows, header bottom edge. Decorative only — not for control edges."
+   },
+   {
+    "name": "border-strong",
+    "value": "#D6C8B6",
+    "usage": "Stronger dividers: summary boxes, gallery thumbnails at rest, chip outlines on ivory."
+   },
+   {
+    "name": "border-control",
+    "value": "#8F7F70",
+    "usage": "Edges of inputs, selects, quantity steppers, checkboxes and radio cards (3.9:1 on white, 3.4:1 on ivory — meets the 3:1 control floor)."
+   },
+   {
+    "name": "border-on-dark",
+    "value": "rgba(247, 241, 232, 0.24)",
+    "usage": "Hairlines on burgundy and charcoal bands."
+   },
+   {
+    "name": "price",
+    "value": "{charcoal}",
+    "usage": "Regular price figure."
+   },
+   {
+    "name": "price-offer",
+    "value": "#A3222F",
+    "usage": "Promotional price, 'عرض' badge fill and savings text. A brighter crimson than burgundy so offers read as offers — 6.6:1 on ivory, ivory text on it 6.6:1."
+   },
+   {
+    "name": "price-offer-tint",
+    "value": "#FBEAE8",
+    "usage": "Ground of the 'وفّر' savings chip; price-offer text on it 6.4:1."
+   },
+   {
+    "name": "whatsapp",
+    "value": "#167A47",
+    "usage": "The WhatsApp CTA fill ONLY (white label 5.4:1). Darker than WhatsApp's own #25D366 so white text passes. Never used for anything that does not open WhatsApp."
+   },
+   {
+    "name": "whatsapp-hover",
+    "value": "#0F6E45",
+    "usage": "Hover/pressed WhatsApp CTA."
+   },
+   {
+    "name": "whatsapp-tint",
+    "value": "#E7F3EC",
+    "usage": "Ground of the WhatsApp conversion panel; whatsapp text on it 4.7:1."
+   },
+   {
+    "name": "success",
+    "value": "#2F6B3F",
+    "usage": "Success text/icons: 'تم رفع الشعار', 'متوفر'. Always paired with a check icon."
+   },
+   {
+    "name": "success-tint",
+    "value": "#E8F1EA",
+    "usage": "Success message ground."
+   },
+   {
+    "name": "warning",
+    "value": "#8A5A0E",
+    "usage": "Warning text: 'الكمية محدودة', production-time notices. Paired with an icon."
+   },
+   {
+    "name": "warning-tint",
+    "value": "#F8EEDB",
+    "usage": "Warning message ground."
+   },
+   {
+    "name": "error",
+    "value": "#B42318",
+    "usage": "Form errors: message text, invalid input border. Always with an icon and words, never colour alone."
+   },
+   {
+    "name": "error-tint",
+    "value": "#FBEAE8",
+    "usage": "Error message ground."
+   },
+   {
+    "name": "info",
+    "value": "#2D5B7A",
+    "usage": "Neutral info notes (delivery, production time)."
+   },
+   {
+    "name": "info-tint",
+    "value": "#E8EFF4",
+    "usage": "Info note ground."
+   },
+   {
+    "name": "focus-ring",
+    "value": "{burgundy}",
+    "usage": "Keyboard focus: 2px solid ring with a 2px cream gap (see shadow focus). On dark bands use gold-soft."
+   },
+   {
+    "name": "disabled-bg",
+    "value": "#EEE7DD",
+    "usage": "Disabled control fill."
+   },
+   {
+    "name": "disabled-text",
+    "value": "#9A8A7A",
+    "usage": "Disabled control label (exempt from contrast minimum, never used for live text)."
+   },
+   {
+    "name": "scrim",
+    "value": "rgba(34, 32, 30, 0.55)",
+    "usage": "Photo scrim behind text on campaign cards and heroes (bottom 60% only)."
+   }
+  ]
+ },
+ "type": {
+  "fonts": [],
+  "families": {
+   "display": "Rakkas, \"Aref Ruqaa\", \"Noto Naskh Arabic\", serif",
+   "ui": "Alexandria, \"Noto Sans Arabic\", Tahoma, sans-serif"
+  },
+  "groups": [
+   {
+    "name": "Display Arabic — Rakkas",
+    "family": "display",
+    "styles": [
+     {
+      "name": "display-hero",
+      "fontSize": "72px",
+      "lineHeight": "1.2",
+      "fontWeight": 400,
+      "usage": "Seasonal hero headline. Mobile 44px. Max 2 lines, 3–6 words. Class .rs-display-hero.",
+      "sample": "شكراً لمن علّمنا"
+     },
+     {
+      "name": "display-campaign",
+      "fontSize": "56px",
+      "lineHeight": "1.25",
+      "fontWeight": 400,
+      "usage": "Campaign names and full-width promotional banners. Mobile 34px. Class .rs-display-campaign.",
+      "sample": "عروض يوم المعلم"
+     },
+     {
+      "name": "display-section",
+      "fontSize": "40px",
+      "lineHeight": "1.3",
+      "fontWeight": 400,
+      "usage": "Major homepage section titles (العروض الحالية، باقات المدارس). Mobile 28px. Class .rs-display-section.",
+      "sample": "باقات المدارس"
+     },
+     {
+      "name": "display-figure",
+      "fontSize": "96px",
+      "lineHeight": "1",
+      "fontWeight": 400,
+      "usage": "Offer figures inside banners and stamps: 1+1، 2+1، ‎-30%. Mobile 64px. Class .rs-display-figure.",
+      "sample": "1+1"
+     }
+    ]
+   },
+   {
+    "name": "Headings — Alexandria",
+    "family": "ui",
+    "styles": [
+     {
+      "name": "h1",
+      "fontSize": "36px",
+      "lineHeight": "1.4",
+      "fontWeight": 700,
+      "usage": "Page titles (category page, product name on PDP). Mobile 26px. Class .rs-h1.",
+      "sample": "دروع وتكريمات"
+     },
+     {
+      "name": "h2",
+      "fontSize": "28px",
+      "lineHeight": "1.45",
+      "fontWeight": 700,
+      "usage": "Sub-section titles inside pages, form section titles. Mobile 22px. Class .rs-h2.",
+      "sample": "خصّص منتجك"
+     },
+     {
+      "name": "h3",
+      "fontSize": "20px",
+      "lineHeight": "1.5",
+      "fontWeight": 600,
+      "usage": "Card group titles, bundle names, drawer titles. Mobile 18px. Class .rs-h3.",
+      "sample": "باقة التكريم المدرسي"
+     }
+    ]
+   },
+   {
+    "name": "Commerce — Alexandria",
+    "family": "ui",
+    "styles": [
+     {
+      "name": "product-title",
+      "fontSize": "17px",
+      "lineHeight": "1.6",
+      "fontWeight": 500,
+      "usage": "Product names on cards (2 lines max, clamp). Mobile 15px. Class .rs-product-title.",
+      "sample": "درع خشبي بلوحة ذهبية محفورة"
+     },
+     {
+      "name": "price",
+      "fontSize": "20px",
+      "lineHeight": "1.2",
+      "fontWeight": 700,
+      "usage": "Regular price. Mobile 18px. Western digits, currency 'د.أ' after the number at 0.7em. Class .rs-price__now.",
+      "sample": "12 د.أ"
+     },
+     {
+      "name": "price-offer",
+      "fontSize": "22px",
+      "lineHeight": "1.2",
+      "fontWeight": 800,
+      "usage": "Promotional price in price-offer colour. Mobile 20px. Class .rs-price__now--offer.",
+      "sample": "8 د.أ"
+     },
+     {
+      "name": "price-was",
+      "fontSize": "15px",
+      "lineHeight": "1.2",
+      "fontWeight": 400,
+      "usage": "Struck-through original price in text-muted. Mobile 14px. Class .rs-price__was.",
+      "sample": "12 د.أ"
+     }
+    ]
+   },
+   {
+    "name": "Text — Alexandria",
+    "family": "ui",
+    "styles": [
+     {
+      "name": "body-lg",
+      "fontSize": "18px",
+      "lineHeight": "1.85",
+      "fontWeight": 400,
+      "usage": "Lead paragraphs, hero sub-copy, About text. Mobile 16px. Class .rs-body-lg.",
+      "sample": "هدايا وتكريمات مخصّصة بالاسم والشعار، مصنوعة بعناية لكل مناسبة."
+     },
+     {
+      "name": "body",
+      "fontSize": "16px",
+      "lineHeight": "1.8",
+      "fontWeight": 400,
+      "usage": "Default body copy, product descriptions, form values (16px stops iOS zoom). Class .rs-body.",
+      "sample": "نحفر الاسم وشعار المدرسة على لوحة ذهبية بتشطيب ناعم."
+     },
+     {
+      "name": "small",
+      "fontSize": "14px",
+      "lineHeight": "1.7",
+      "fontWeight": 400,
+      "usage": "Helper text, card notes, footer links. Class .rs-small.",
+      "sample": "قابل للتخصيص بالاسم والشعار"
+     },
+     {
+      "name": "caption",
+      "fontSize": "12px",
+      "lineHeight": "1.6",
+      "fontWeight": 400,
+      "usage": "Image captions, legal lines, counters. Class .rs-caption.",
+      "sample": "يُسلَّم خلال 3–5 أيام عمل"
+     }
+    ]
+   },
+   {
+    "name": "Interface — Alexandria",
+    "family": "ui",
+    "styles": [
+     {
+      "name": "button",
+      "fontSize": "16px",
+      "lineHeight": "1",
+      "fontWeight": 600,
+      "usage": "Button labels (md/lg). Small buttons 14px. Class .rs-btn.",
+      "sample": "اطلب عبر واتساب"
+     },
+     {
+      "name": "label",
+      "fontSize": "14px",
+      "lineHeight": "1.5",
+      "fontWeight": 500,
+      "usage": "Form labels, filter names, tab labels. Class .rs-label.",
+      "sample": "اسم المدرسة"
+     },
+     {
+      "name": "nav",
+      "fontSize": "15px",
+      "lineHeight": "1.5",
+      "fontWeight": 500,
+      "usage": "Header category links. Class .rs-nav__link.",
+      "sample": "ميداليات"
+     },
+     {
+      "name": "badge",
+      "fontSize": "12px",
+      "lineHeight": "1",
+      "fontWeight": 600,
+      "usage": "Badges and tags. Never letter-space Arabic. Class .rs-badge.",
+      "sample": "الأكثر طلباً"
+     },
+     {
+      "name": "eyebrow",
+      "fontSize": "14px",
+      "lineHeight": "1.5",
+      "fontWeight": 600,
+      "usage": "Small line above a display title (occasion, season) in text-brand or gold-ink, with a 24px gold rule. Class .rs-eyebrow.",
+      "sample": "يوم المعلم · 5 تشرين الأول"
+     }
+    ]
+   }
+  ]
+ },
+ "spacing": {
+  "tokens": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Icon-to-text nudge, badge vertical padding."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Gap between badges, icon + label in buttons, price row gaps."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Product grid gap on mobile; card body padding top; chip gaps."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Mobile page gutter; input horizontal padding; card internal padding."
+   },
+   {
+    "name": "space-5",
+    "value": "20px",
+    "usage": "Field-to-field gap in forms."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Product grid gap on desktop; padding in bundle/offer cards; section header to content on mobile."
+   },
+   {
+    "name": "space-8",
+    "value": "32px",
+    "usage": "Desktop page gutter; section header to content on desktop; hero content padding on mobile."
+   },
+   {
+    "name": "space-10",
+    "value": "40px",
+    "usage": "Space between product rows and an in-between banner (mobile)."
+   },
+   {
+    "name": "space-12",
+    "value": "48px",
+    "usage": "Hero content padding on desktop; between banner and grid on desktop."
+   },
+   {
+    "name": "space-14",
+    "value": "56px",
+    "usage": "Homepage section vertical padding on mobile."
+   },
+   {
+    "name": "space-20",
+    "value": "80px",
+    "usage": "Homepage section vertical padding on tablet."
+   },
+   {
+    "name": "space-24",
+    "value": "96px",
+    "usage": "Homepage section vertical padding on desktop; whitespace around full-width campaign banners."
+   }
+  ]
+ },
+ "radius": {
+  "tokens": [
+   {
+    "name": "radius-sm",
+    "value": "6px",
+    "usage": "Badges, checkboxes, chips, small tags, thumbnails under 64px."
+   },
+   {
+    "name": "radius-md",
+    "value": "10px",
+    "usage": "Buttons, inputs, selects, quantity stepper, offer stamps, radio cards."
+   },
+   {
+    "name": "radius-lg",
+    "value": "16px",
+    "usage": "Product media, product/bundle/offer cards, gallery main image, upload zone."
+   },
+   {
+    "name": "radius-banner",
+    "value": "24px",
+    "usage": "Heroes, full-width campaign banners, in-between banners, campaign cards, the WhatsApp section panel (desktop; 16px on mobile)."
+   },
+   {
+    "name": "radius-round",
+    "value": "999px",
+    "usage": "Only for circles: category rail thumbnails, carousel arrows, the WhatsApp floating button, dots. Never for buttons or cards."
+   }
+  ]
+ },
+ "shadow": {
+  "tokens": [
+   {
+    "name": "shadow-xs",
+    "value": "0 1px 2px rgba(58, 43, 38, 0.06)",
+    "usage": "Inputs at rest, chips, quantity stepper."
+   },
+   {
+    "name": "shadow-sm",
+    "value": "0 1px 2px rgba(58, 43, 38, 0.04), 0 4px 12px rgba(58, 43, 38, 0.06)",
+    "usage": "Cards at rest that sit on ivory; sticky header once scrolled."
+   },
+   {
+    "name": "shadow-md",
+    "value": "0 2px 6px rgba(58, 43, 38, 0.05), 0 12px 28px rgba(58, 43, 38, 0.09)",
+    "usage": "Card hover lift (with a -2px translate), dropdown menus, offer stamp on photos."
+   },
+   {
+    "name": "shadow-lg",
+    "value": "0 4px 12px rgba(58, 43, 38, 0.06), 0 24px 56px rgba(58, 43, 38, 0.14)",
+    "usage": "Mobile drawer, sticky order bar, WhatsApp floating button, modals."
+   },
+   {
+    "name": "shadow-focus",
+    "value": "0 0 0 2px #FCF8F2, 0 0 0 4px #6B1F2B",
+    "usage": "Keyboard focus ring on light grounds: cream gap + 2px solid burgundy."
+   },
+   {
+    "name": "shadow-focus-dark",
+    "value": "0 0 0 2px #4C121C, 0 0 0 4px #D8BC84",
+    "usage": "Keyboard focus ring on burgundy/charcoal bands."
+   }
+  ]
+ },
+ "layout": {
+  "note": "Breakpoints: sm 640px, md 768px, lg 1024px, xl 1280px. Mobile-first: write the mobile value, override upward.",
+  "tokens": [
+   {
+    "name": "container-max",
+    "value": "1280px",
+    "usage": "Max content width (product grids, banners). Banners may bleed to 1440px."
+   },
+   {
+    "name": "container-narrow",
+    "value": "760px",
+    "usage": "Text pages, product customization form column, About copy."
+   },
+   {
+    "name": "gutter-mobile",
+    "value": "16px",
+    "usage": "Side padding under 768px."
+   },
+   {
+    "name": "gutter-desktop",
+    "value": "32px",
+    "usage": "Side padding from 1024px."
+   },
+   {
+    "name": "header-mobile",
+    "value": "64px",
+    "usage": "Mobile header bar height (plus the 52px category chip row). Logo 44px tall."
+   },
+   {
+    "name": "header-desktop",
+    "value": "148px",
+    "usage": "Desktop two-tier header: 96px logo row + 52px category row."
+   },
+   {
+    "name": "tap-min",
+    "value": "44px",
+    "usage": "Minimum touch target for any control."
+   }
+  ]
+ }
+}

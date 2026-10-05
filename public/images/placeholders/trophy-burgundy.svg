@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E1A25"></stop><stop offset="1" stop-color="#3E0F17"></stop></linearGradient>
+<radialGradient id="glow" cx=".62" cy=".32" r=".6"><stop offset="0" stop-color="#F7F1E8" stop-opacity="0.18"></stop><stop offset="1" stop-color="#F7F1E8" stop-opacity="0"></stop></radialGradient>
+<radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22201E" stop-opacity=".35"></stop><stop offset="1" stop-color="#22201E" stop-opacity="0"></stop></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6CF9C"></stop><stop offset=".45" stop-color="#C7A15B"></stop><stop offset="1" stop-color="#8C6A2E"></stop></linearGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3622"></stop><stop offset=".5" stop-color="#7A4E2D"></stop><stop offset="1" stop-color="#4E2E1C"></stop></linearGradient>
+<linearGradient id="burg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A2E3C"></stop><stop offset="1" stop-color="#4C121C"></stop></linearGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#wall)"></rect>
+<rect width="800" height="1000" fill="url(#glow)"></rect>
+<rect x="0" y="780" width="800" height="220" fill="#2E0B11"></rect>
+<ellipse cx="400" cy="790" rx="220" ry="22" fill="url(#shadow)"></ellipse>
+<rect x="290" y="700" width="220" height="90" rx="8" fill="#22201E"></rect>
+<rect x="305" y="715" width="190" height="8" rx="4" fill="#C7A15B" opacity=".8"></rect>
+<rect x="340" y="650" width="120" height="56" rx="6" fill="url(#gold)"></rect>
+<rect x="382" y="560" width="36" height="100" fill="url(#gold)"></rect>
+<path d="M260 250 H540 V330 C540 470 470 560 400 560 C330 560 260 470 260 330 Z" fill="url(#gold)"></path>
+<path d="M262 280 C190 280 180 400 280 430" fill="none" stroke="#C7A15B" stroke-width="18"></path>
+<path d="M538 280 C610 280 620 400 520 430" fill="none" stroke="#B48E48" stroke-width="18"></path>
+<path d="M300 270 C300 420 340 500 370 530" fill="none" stroke="#F3E3BC" stroke-width="10" opacity=".6"></path>
+<ellipse cx="400" cy="252" rx="140" ry="14" fill="#8C6A2E"></ellipse></svg>

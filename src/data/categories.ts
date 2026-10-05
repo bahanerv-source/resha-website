@@ -1,0 +1,153 @@
+import type { Category } from './types';
+
+const PH = '/images/placeholders';
+const PP = '/images/products-ph';
+
+/**
+ * Product categories, in navigation order.
+ * To add a category: add its id to `CategoryId` in types.ts, then add an entry here.
+ */
+export const categories: Category[] = [
+  {
+    id: 'plaques',
+    slug: 'plaques',
+    name: 'دروع وتكريم',
+    short: 'دروع',
+    image: `${PP}/plaque-walnut.svg`,
+    banner: `${PH}/campaign-teachers-wide.svg`,
+    eyebrow: 'دروع وتكريم',
+    headline: 'تكريم يليق [بالإنجاز]',
+    intro: 'دروع خشبية وأكريليك وكريستال، نحفر عليها الاسم والعبارة وشعار المدرسة أو المؤسسة.',
+    seoTitle: 'دروع تكريم مخصّصة بالاسم والشعار',
+    seoDescription:
+      'دروع تكريم خشبية وأكريليك وكريستال محفورة بالاسم والشعار للمعلمين والطلبة والموظفين، مع أسعار كميات للمدارس وتوصيل داخل الأردن.',
+    offerId: 'teachers-25',
+    stripId: 'strip-schools-quote',
+    inNav: true,
+    keywords: ['درع', 'دروع', 'تكريم', 'شكر', 'أكريليك', 'كريستال', 'خشب'],
+  },
+  {
+    id: 'medals',
+    slug: 'medals',
+    name: 'ميداليات',
+    short: 'ميداليات',
+    image: `${PP}/medal-gold.svg`,
+    banner: `${PH}/campaign-schools-wide.svg`,
+    eyebrow: 'ميداليات',
+    headline: 'لكل متفوّق [ميداليته]',
+    intro: 'ميداليات معدنية وخشبية بالاسم والسنة، مع شرائط بألوان المدرسة وأسعار خاصة للكميات.',
+    seoTitle: 'ميداليات تفوق وتكريم محفورة بالاسم',
+    seoDescription:
+      'ميداليات تفوق وتكريم ذهبية وفضية وخشبية محفورة بالاسم والسنة، مع عروض للكميات للمدارس ورياض الأطفال في الأردن.',
+    offerId: 'buy10get10',
+    stripId: 'strip-100',
+    inNav: true,
+    keywords: ['ميدالية', 'تفوق', 'رياض أطفال', 'روضة', 'ذهبية', 'شريط'],
+  },
+  {
+    id: 'teacher-gifts',
+    slug: 'teacher-gifts',
+    name: 'هدايا المعلمين',
+    short: 'المعلمين',
+    image: `${PP}/gift-box.svg`,
+    banner: `${PH}/campaign-gifts-wide.svg`,
+    eyebrow: 'هدايا المعلمين',
+    headline: 'شكراً لمن [علّمنا]',
+    intro: 'هدايا بالاسم لكل معلم ومعلمة: صناديق هدايا، أقلام، أكواب ولوحات شكر — من الطالب أو من الإدارة.',
+    seoTitle: 'هدايا معلمين ومعلمات مخصّصة بالاسم',
+    seoDescription:
+      'هدايا للمعلمين والمعلمات بالاسم: صناديق هدايا، أقلام محفورة، أكواب ولوحات شكر، مع عروض يوم المعلم وباقات للمدارس في الأردن.',
+    offerId: 'buy1get1',
+    stripId: 'strip-teachers',
+    inNav: true,
+    keywords: ['معلم', 'معلمة', 'يوم المعلم', 'شكر', 'هدية', 'قلم', 'كوب'],
+  },
+  {
+    id: 'graduation',
+    slug: 'graduation',
+    name: 'التخرّج',
+    short: 'التخرّج',
+    image: `${PP}/graduation-cap.svg`,
+    banner: `${PH}/campaign-graduation-wide.svg`,
+    eyebrow: 'التخرّج',
+    headline: 'لحظة تستحق [التخليد]',
+    intro: 'أوشحة ودروع وعلّاقات بالاسم والسنة، لحفلات تخرّج المدارس والجامعات ورياض الأطفال.',
+    seoTitle: 'هدايا تخرّج مخصّصة بالاسم والسنة',
+    seoDescription:
+      'هدايا تخرّج مخصّصة: أوشحة مطرّزة بالاسم، دروع الخرّيج، ميداليات وعلّاقات بالسنة، مع عروض الكميات لحفلات التخرّج في الأردن.',
+    offerId: 'graduation-20-5',
+    stripId: 'strip-graduation',
+    inNav: true,
+    keywords: ['تخرج', 'خريج', 'وشاح', 'دفعة', 'حفل'],
+  },
+  {
+    id: 'school',
+    slug: 'school',
+    name: 'منتجات المدارس',
+    short: 'المدارس',
+    image: `${PP}/school-bundle.svg`,
+    banner: `${PH}/campaign-schools-wide.svg`,
+    eyebrow: 'للمدارس ورياض الأطفال',
+    headline: 'كل ما تحتاجه [مدرستك]',
+    intro: 'باقات تكريم جاهزة، بطاقات وأختام ومنتجات يومية بشعار المدرسة — مع أسعار كميات واضحة.',
+    seoTitle: 'هدايا ومنتجات مدارس ورياض أطفال بشعار المدرسة',
+    seoDescription:
+      'منتجات وهدايا للمدارس ورياض الأطفال بشعار المدرسة: باقات تكريم، ميداليات، أختام وبطاقات أسماء، بأسعار كميات وتوصيل داخل الأردن.',
+    offerId: 'school-packages',
+    stripId: 'strip-100',
+    inNav: true,
+    keywords: ['مدرسة', 'مدارس', 'روضة', 'باقة', 'إدارة', 'شعار'],
+  },
+  {
+    id: 'custom',
+    slug: 'custom',
+    name: 'هدايا مخصّصة',
+    short: 'مخصّصة',
+    image: `${PP}/engraved-box.svg`,
+    banner: `${PH}/campaign-gifts-wide.svg`,
+    eyebrow: 'هدايا مخصّصة',
+    headline: 'هدية تحمل [اسمك]',
+    intro: 'أكريليك وخشب محفور وصناديق مناسبات — نصمّمها لك بالاسم والصورة والعبارة التي تختارها.',
+    seoTitle: 'هدايا مخصّصة بالاسم في الأردن',
+    seoDescription:
+      'هدايا مخصّصة بالاسم والصورة في الأردن: لوحات أكريليك، صناديق خشبية محفورة وهدايا مناسبات، تصميم حسب طلبك وطلب سهل عبر واتساب.',
+    inNav: true,
+    keywords: ['مخصص', 'بالاسم', 'صورة', 'أكريليك', 'خشب', 'هدية'],
+  },
+  {
+    id: 'keychains',
+    slug: 'keychains',
+    name: 'علّاقات مفاتيح',
+    short: 'علّاقات',
+    image: `${PP}/keychain-leather.svg`,
+    banner: `${PH}/campaign-gifts-wide.svg`,
+    eyebrow: 'علّاقات مفاتيح',
+    headline: 'تفصيلة صغيرة [بالاسم]',
+    intro: 'علّاقات مفاتيح جلدية وخشبية بالاسم أو الحرف الأول — توزيعات وهدايا بأسعار الكميات.',
+    seoTitle: 'علّاقات وميداليات مفاتيح بالاسم',
+    seoDescription:
+      'علّاقات (ميداليات) مفاتيح جلدية وخشبية محفورة بالاسم، توزيعات وهدايا للمناسبات والمدارس بأسعار كميات في الأردن.',
+    offerId: 'buy1get1',
+    inNav: true,
+    keywords: ['ميدالية مفاتيح', 'ميداليات مفاتيح', 'علاقة', 'توزيعات', 'جلد'],
+  },
+  {
+    id: 'prints',
+    slug: 'prints',
+    name: 'مطبوعات',
+    short: 'مطبوعات',
+    image: `${PP}/certificate-frame.svg`,
+    banner: `${PH}/campaign-schools-wide.svg`,
+    eyebrow: 'مطبوعات',
+    headline: 'شهادات وتفاصيل [مطبوعة]',
+    intro: 'شهادات تقدير على ورق فاخر، ملصقات أسماء ودفاتر بغلاف مخصّص — للمدارس وللمناسبات.',
+    seoTitle: 'شهادات تقدير ومطبوعات مخصّصة',
+    seoDescription:
+      'مطبوعات مخصّصة في الأردن: شهادات تقدير على ورق فاخر، ملصقات أسماء للطلاب ودفاتر بغلاف بالاسم، بأسعار كميات للمدارس.',
+    offerId: 'buy100get100',
+    inNav: true,
+    keywords: ['شهادة', 'شهادات', 'ملصقات', 'دفتر', 'طباعة'],
+  },
+];
+
+export const getCategory = (id: string) => categories.find((c) => c.id === id || c.slug === id);

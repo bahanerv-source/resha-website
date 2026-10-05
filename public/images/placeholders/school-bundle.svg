@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4ECDF"></stop><stop offset="1" stop-color="#E6D9C5"></stop></linearGradient>
+<radialGradient id="glow" cx=".62" cy=".32" r=".6"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"></stop><stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop></radialGradient>
+<radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22201E" stop-opacity=".35"></stop><stop offset="1" stop-color="#22201E" stop-opacity="0"></stop></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6CF9C"></stop><stop offset=".45" stop-color="#C7A15B"></stop><stop offset="1" stop-color="#8C6A2E"></stop></linearGradient>
+<linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3622"></stop><stop offset=".5" stop-color="#7A4E2D"></stop><stop offset="1" stop-color="#4E2E1C"></stop></linearGradient>
+<linearGradient id="burg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A2E3C"></stop><stop offset="1" stop-color="#4C121C"></stop></linearGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#wall)"></rect>
+<rect width="800" height="1000" fill="url(#glow)"></rect>
+<rect x="0" y="780" width="800" height="220" fill="#DCCBB2"></rect>
+<ellipse cx="400" cy="790" rx="330" ry="26" fill="url(#shadow)"></ellipse>
+<rect x="110" y="360" width="190" height="430" rx="10" fill="url(#wood)"></rect>
+<rect x="135" y="410" width="140" height="190" rx="4" fill="url(#gold)"></rect>
+<circle cx="560" cy="560" r="120" fill="url(#gold)"></circle>
+<circle cx="560" cy="560" r="92" fill="none" stroke="#8C6A2E" stroke-width="5" opacity=".6"></circle>
+<path d="M500 300 L560 440 L620 300 Z" fill="#6B1F2B"></path>
+<rect x="320" y="600" width="200" height="190" rx="8" fill="#6B1F2B"></rect>
+<rect x="340" y="640" width="160" height="10" rx="5" fill="#D8BC84"></rect>
+<rect x="360" y="664" width="120" height="8" rx="4" fill="#D8BC84" opacity=".7"></rect>
+<rect x="640" y="690" width="90" height="100" rx="45" fill="#F7F1E8"></rect></svg>

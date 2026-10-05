@@ -1,0 +1,230 @@
+{
+ "/images/placeholders/acrylic-photo.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/acrylic-plaque.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/banner-medals-wide.svg": {
+  "w": 1920,
+  "h": 760
+ },
+ "/images/placeholders/campaign-gifts-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/placeholders/campaign-graduation-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/placeholders/campaign-schools-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/placeholders/campaign-teachers-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/placeholders/ceramic-mug.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/certificate-frame.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/crystal-award.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/custom-notebook.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/desk-nameplate.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/engraved-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/gift-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/graduation-cap.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/graduation-sash.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/hero-teachers.svg": {
+  "w": 1920,
+  "h": 860
+ },
+ "/images/placeholders/keychain-leather.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/keychain-wood.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/medal-gold.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/medal-trio.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/pen-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/plaque-walnut.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/school-bundle.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/school-labels.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/school-logo.svg": {
+  "w": 240,
+  "h": 120
+ },
+ "/images/placeholders/teacher-stamp.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/thank-you-frame.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/trophy-burgundy.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/placeholders/wooden-medal.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/acrylic-photo.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/acrylic-plaque.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/campaign-gifts-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/products-ph/campaign-graduation-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/products-ph/campaign-schools-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/products-ph/campaign-teachers-wide.svg": {
+  "w": 1600,
+  "h": 700
+ },
+ "/images/products-ph/ceramic-mug.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/certificate-frame.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/crystal-award.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/custom-notebook.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/desk-nameplate.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/engraved-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/gift-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/graduation-cap.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/graduation-sash.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/keychain-leather.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/keychain-wood.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/medal-gold.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/medal-trio.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/pen-box.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/plaque-walnut.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/school-bundle.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/school-labels.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/teacher-stamp.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/thank-you-frame.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/trophy-burgundy.svg": {
+  "w": 800,
+  "h": 1000
+ },
+ "/images/products-ph/wooden-medal.svg": {
+  "w": 800,
+  "h": 1000
+ }
+}

@@ -69,7 +69,7 @@ export const home: HomeSection[] = [
     id: 'new',
     title: 'جديد في ريشة',
     sub: 'قطع جديدة صمّمناها لهذا الموسم.',
-    products: ['calligraphy-led-lamp', 'acrylic-plaque-wood-base', 'desk-nameplate-acrylic', 'thank-you-mug', 'kindergarten-graduation-medal', 'graduate-plaque', 'student-name-labels'],
+    products: ['calligraphy-led-lamp', 'flame-excellence-award', 'acrylic-plaque-wood-base', 'desk-nameplate-acrylic', 'thank-you-mug', 'kindergarten-graduation-medal', 'graduate-plaque', 'student-name-labels'],
     rowBadge: 'new',
     layout: 'rail',
   },

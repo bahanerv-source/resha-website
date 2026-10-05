@@ -89,7 +89,7 @@ export const categories: Category[] = [
     slug: 'school',
     name: 'منتجات المدارس',
     short: 'المدارس',
-    image: '/images/lifestyle/school-awards.webp',
+    image: '/images/products/flame-excellence-award.webp',
     banner: `${PH}/campaign-schools-wide.svg`,
     artwork: { src: '/images/banners/collection.webp', textSide: 'left' },
     eyebrow: 'للمدارس ورياض الأطفال',

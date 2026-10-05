@@ -117,6 +117,20 @@ export const products: Product[] = [
     fields: plaqueFields,
   },
   {
+    slug: 'flame-excellence-award',
+    name: 'درع التفوق بتصميم الشعلة',
+    category: 'plaques',
+    alsoIn: ['school'],
+    images: ['/images/products/flame-excellence-award.webp'],
+    price: 14, // sample price — set the real one
+    badges: ['new'],
+    note: 'بالاسم والشعار وعبارة التهنئة',
+    description:
+      'درع بتصميم الشعلة بلون خشبي عنابي وإطار ذهبي لامع على قاعدة سوداء، تُطبع عليه عبارة التهنئة واسم المكرَّم وشعار المدرسة — لتكريم الطلبة المتفوقين.',
+    details: ['تصميم الشعلة بإطار ذهبي لامع', 'قاعدة سوداء', 'طباعة ملوّنة للاسم والشعار والعبارة'],
+    fields: plaqueFields,
+  },
+  {
     slug: 'crystal-award-velvet',
     name: 'درع كريستال فاخر بعلبة مخملية',
     category: 'plaques',

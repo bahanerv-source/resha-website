@@ -263,6 +263,24 @@
    }
   ]
  },
+ "/images/products/flame-excellence-award.webp": {
+  "w": 1254,
+  "h": 1254,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/flame-excellence-award-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/products/flame-excellence-award-960.webp"
+   },
+   {
+    "w": 1254,
+    "src": "/_img/images/products/flame-excellence-award-1254.webp"
+   }
+  ]
+ },
  "/images/products/football-keychain.webp": {
   "w": 1254,
   "h": 1254,

@@ -8,7 +8,8 @@ Homepage → Category → Product → Personalisation → WhatsApp.
 
 ```bash
 npm install
-npm run dev      # معاينة على http://localhost:3000 مع إعادة البناء عند كل تعديل
+npm run dev      # معاينة على http://localhost:3000 — تُحدَّث الصفحة وحدها بعد كل تعديل
+npm run live     # مثل dev، ويجلب أيضاً أي تعديلات جديدة من GitHub كل 15 ثانية (اتركه يعمل وافتح الصفحة فقط)
 npm run build    # ينتج مجلد dist/ الجاهز للنشر
 ```
 

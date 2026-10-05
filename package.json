@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
+    "live": "node scripts/dev.mjs --pull",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/dev.mjs",
     "typecheck": "tsc --noEmit",

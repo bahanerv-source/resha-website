@@ -235,7 +235,7 @@ export function AboutBlock() {
   return (
     <section className="rs-about" id="about" aria-labelledby="about-title">
       <div className="rs-about__media">
-        <Photo src="/images/products-ph/engraved-box.svg" alt="صندوق خشبي محفور بالاسم" sizes="(min-width: 1024px) 50vw, 100vw" />
+        <Photo src="/images/lifestyle/thanks-plaque.webp" alt="درع شكر وتقدير محفور بالاسم مع ميدالية ذهبية وصندوق هدية" sizes="(min-width: 1024px) 50vw, 100vw" />
       </div>
       <div className="rs-about__body">
         <p className="rs-eyebrow">عن ريشة</p>

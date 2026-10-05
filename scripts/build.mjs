@@ -44,13 +44,21 @@ async function images() {
       if (vb) manifest[url] = { w: Math.round(+vb[1]), h: Math.round(+vb[2]) };
     } else if (['.jpg', '.jpeg', '.png', '.webp', '.avif'].includes(ext) && sharp && !url.startsWith('/images/brand/')) {
       const meta = await sharp(file).metadata();
-      const widths = [480, 960, 1600].filter((w) => w < meta.width).concat(meta.width <= 1600 ? [meta.width] : []);
+      // Smaller copies for phones, plus the full-size picture for large and high-density (retina) screens.
+      const MAX = 2400;
+      const widths = [480, 960, 1600, MAX].filter((w) => w < meta.width).concat(meta.width <= MAX ? [meta.width] : []);
       const variants = [];
       for (const w of [...new Set(widths)]) {
         const outUrl = `/_img${url.replace(/\.[^.]+$/, '')}-${w}.webp`;
         const outFile = path.join(dist, outUrl);
         await mkdir(path.dirname(outFile), { recursive: true });
-        await sharp(file).resize({ width: w }).webp({ quality: 80 }).toFile(outFile);
+        if (w === meta.width && ext === '.webp') {
+          // Already a WebP at full size: serve the original untouched (re-encoding would only lose detail).
+          await cp(file, outFile);
+        } else {
+          // smartSubsample keeps thin coloured lines (burgundy text on banners) crisp.
+          await sharp(file).resize({ width: w }).webp({ quality: 88, smartSubsample: true, effort: 5 }).toFile(outFile);
+        }
         variants.push({ w, src: outUrl });
       }
       manifest[url] = { w: meta.width, h: meta.height, variants };

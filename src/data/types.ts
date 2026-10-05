@@ -22,6 +22,8 @@ export interface Category {
   image: string;
   /** Wide 16:7 image for the category page header. */
   banner: string;
+  /** Optional designed banner (text drawn in) shown instead of `banner`; its button scrolls to the products. */
+  artwork?: Artwork;
   /** Eyebrow + headline + one sentence for the category page header. */
   eyebrow: string;
   headline: string;

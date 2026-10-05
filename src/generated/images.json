@@ -14,6 +14,10 @@
    {
     "w": 1600,
     "src": "/_img/images/banners/collection-1600.webp"
+   },
+   {
+    "w": 2000,
+    "src": "/_img/images/banners/collection-2000.webp"
    }
   ]
  },
@@ -32,6 +36,78 @@
    {
     "w": 1600,
     "src": "/_img/images/banners/teachers-day-1600.webp"
+   },
+   {
+    "w": 2000,
+    "src": "/_img/images/banners/teachers-day-2000.webp"
+   }
+  ]
+ },
+ "/images/lifestyle/school-awards.webp": {
+  "w": 1000,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/lifestyle/school-awards-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/lifestyle/school-awards-960.webp"
+   },
+   {
+    "w": 1000,
+    "src": "/_img/images/lifestyle/school-awards-1000.webp"
+   }
+  ]
+ },
+ "/images/lifestyle/teacher-medal.webp": {
+  "w": 870,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/lifestyle/teacher-medal-480.webp"
+   },
+   {
+    "w": 870,
+    "src": "/_img/images/lifestyle/teacher-medal-870.webp"
+   }
+  ]
+ },
+ "/images/lifestyle/teachers-gifts.webp": {
+  "w": 1000,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/lifestyle/teachers-gifts-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/lifestyle/teachers-gifts-960.webp"
+   },
+   {
+    "w": 1000,
+    "src": "/_img/images/lifestyle/teachers-gifts-1000.webp"
+   }
+  ]
+ },
+ "/images/lifestyle/thanks-plaque.webp": {
+  "w": 1000,
+  "h": 667,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/lifestyle/thanks-plaque-480.webp"
+   },
+   {
+    "w": 960,
+    "src": "/_img/images/lifestyle/thanks-plaque-960.webp"
+   },
+   {
+    "w": 1000,
+    "src": "/_img/images/lifestyle/thanks-plaque-1000.webp"
    }
   ]
  },
@@ -173,6 +249,20 @@
    }
   ]
  },
+ "/images/products/excellence-medal-gold.webp": {
+  "w": 520,
+  "h": 520,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/excellence-medal-gold-480.webp"
+   },
+   {
+    "w": 520,
+    "src": "/_img/images/products/excellence-medal-gold-520.webp"
+   }
+  ]
+ },
  "/images/products/football-keychain.webp": {
   "w": 1254,
   "h": 1254,
@@ -188,6 +278,30 @@
    {
     "w": 1254,
     "src": "/_img/images/products/football-keychain-1254.webp"
+   }
+  ]
+ },
+ "/images/products/teacher-gift-box.webp": {
+  "w": 470,
+  "h": 470,
+  "variants": [
+   {
+    "w": 470,
+    "src": "/_img/images/products/teacher-gift-box-470.webp"
+   }
+  ]
+ },
+ "/images/products/teacher-thanks-plaque.webp": {
+  "w": 560,
+  "h": 560,
+  "variants": [
+   {
+    "w": 480,
+    "src": "/_img/images/products/teacher-thanks-plaque-480.webp"
+   },
+   {
+    "w": 560,
+    "src": "/_img/images/products/teacher-thanks-plaque-560.webp"
    }
   ]
  },

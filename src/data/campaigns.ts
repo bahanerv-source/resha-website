@@ -76,7 +76,7 @@ export const banners: Banner[] = [
     eyebrow: 'تكريم المتفوقين',
     title: 'صف كامل [بسعر] نصف صف',
     text: 'اشترِ 10 ميداليات تفوق محفورة بالاسم واحصل على 10 مثلها مجاناً — لكل طالب ميداليته.',
-    image: `${PH}/banner-medals-wide.svg`,
+    image: '/images/lifestyle/teacher-medal.webp',
     imageAlt: 'ثلاث ميداليات ذهبية وفضية وبرونزية معلّقة',
     stamp: { figure: '10+10', caption: '10 مجاناً' },
     cta: { label: 'اختر الميداليات', href: '/product/excellence-medal-gold/' },
@@ -114,7 +114,7 @@ export const strips: Strip[] = [
     stamp: { figure: '1+1', caption: 'الثانية مجاناً' },
     title: 'هديتان لمعلمَين بسعر هدية واحدة',
     sub: 'على صناديق هدايا المعلمين والأقلام المحفورة — كل قطعة باسم مختلف.',
-    image: `${PH}/gift-box.svg`,
+    image: '/images/lifestyle/teachers-gifts.webp',
     cta: { label: 'اختر العرض', href: '/offers/#offer-buy1get1' },
   },
   {
@@ -123,7 +123,7 @@ export const strips: Strip[] = [
     stamp: { figure: '100+100', caption: '100 مجاناً', long: true },
     title: 'للمدارس: اشترِ 100 واحصل على 100',
     sub: 'ميداليات خشبية وملصقات أسماء وشهادات تقدير لكل طلاب المدرسة.',
-    image: `${PH}/wooden-medal.svg`,
+    image: '/images/lifestyle/school-awards.webp',
     cta: { label: 'تسوّق العرض', href: '/offers/#offer-buy100get100' },
   },
   {
@@ -141,7 +141,7 @@ export const strips: Strip[] = [
     stamp: { figure: '30', caption: 'قطعة فأكثر' },
     title: 'طلب للمدرسة كاملة؟',
     sub: 'كلما زادت الكمية انخفض سعر القطعة — أرسل لنا العدد ونرسل لك السعر النهائي.',
-    image: `${PH}/plaque-walnut.svg`,
+    image: '/images/lifestyle/thanks-plaque.webp',
     cta: { label: 'تسوّق باقات المدارس', href: '/category/school/#bundles' },
   },
 ];

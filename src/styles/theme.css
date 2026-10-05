@@ -333,10 +333,16 @@
 .rs-promo__text { margin: 0; max-width: 420px; font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--ink-soft); }
 .rs-on-dark .rs-promo__text { color: rgba(255, 255, 255, .75); }
 .rs-promo .rs-btn { margin-block-start: 8px; min-width: 200px; }
+/* Picture on one side, words on the other — real photographs stay fully visible. */
+@media (min-width: 768px) {
+  .rs-promo { grid-template-columns: 1fr 1fr; min-height: 440px; }
+  .rs-promo__media { order: 2; position: relative; aspect-ratio: auto; }
+  .rs-promo__media img { position: absolute; inset: 0; }
+  .rs-promo__copy { align-content: center; justify-items: start; text-align: start; padding: 56px; gap: 14px; }
+}
 @media (min-width: 1024px) {
-  .rs-promo { min-height: 520px; align-items: center; }
-  .rs-promo__media { position: absolute; inset: 0; aspect-ratio: auto; z-index: -1; }
-  .rs-promo__copy { width: min(44%, 520px); margin-inline-start: 72px; padding: 72px 0; justify-items: start; text-align: start; gap: 16px; }
+  .rs-promo { min-height: 520px; }
+  .rs-promo__copy { padding: 72px; gap: 16px; }
   .rs-promo__title { font-size: 46px; line-height: 1.3; }
   .rs-promo__num { font-size: 96px; }
   .rs-promo__unit { font-size: 19px; }

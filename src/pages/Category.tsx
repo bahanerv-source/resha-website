@@ -4,7 +4,7 @@ import { getOffer } from '../data/offers';
 import { categoryUrl, productsInCategory } from '../lib/catalog';
 import { dayMonth } from '../lib/format';
 import { waAbout } from '../lib/whatsapp';
-import { PageHero } from '../components/banners';
+import { artFocus, PageHero } from '../components/banners';
 import { BundleCard } from '../components/cards';
 import { Icon } from '../components/Icon';
 import { Island } from '../components/Island';
@@ -21,7 +21,9 @@ export function CategoryPage({ c }: { c: Category }) {
           eyebrow={c.eyebrow}
           title={c.headline}
           intro={c.intro}
-          image={c.banner}
+          image={c.artwork?.src ?? c.banner}
+          focus={c.artwork ? artFocus(c.artwork) : undefined}
+          href={c.artwork ? '#h-products' : undefined}
           crumbs={[{ label: 'الرئيسية', href: '/' }, { label: c.name }]}
         />
 
